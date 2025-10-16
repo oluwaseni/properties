@@ -1,0 +1,237 @@
+<div class="home-full">
+  <app-topbanner></app-topbanner>
+
+
+
+  <div class="topside row">
+    <div class="col-3 left-top">
+
+      <div>
+        <button class="btn">
+          <i class="fas fa-house"></i> Lagos > Victoria Island
+        </button>
+      </div>
+      <div class="details">2 Bedroom Villa at The Floating Seahorse by Kleindienst</div>
+
+      <div class="contact-tags">
+
+
+        <!-- <button type="button" class="btn feature-contact-us btn-outline-secondary">
+          <i class="fas fa-phone"></i> Contact Us Now
+        </button> -->
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <button type="button" class="btn btn-light contact-us-icon"><i class="fas fa-phone"></i></button>
+          <button type="button" class="btn contact-us btn-dark">Contact Us Now</button>
+        </div>
+
+      </div>
+      <div class="container position-relative" style="height: 300px;">
+        <div class="contact-card p-3 d-flex flex-row align-items-center gap-3" style="max-width: 300px;">
+          <!-- Profile Image -->
+          <img src="../assets/images/bedroom1.jfif" class="profile" alt="">
+
+          <!-- Agent Info -->
+          <div class="flex-grow-1">
+            <h6 class="mb-0 topic-small">Azeeza al-Sham</h6>
+            <small class="text-muted text-small">Property Consultant</small>
+          </div>
+
+          <!-- Contact Button -->
+          <button class="btn btn-sm d-flex align-items-center gap-1 feature-contact">
+            <i class="fas fa-phone"></i> Contact
+          </button>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-6 mid-top">
+      <swiper-container effect="cards" grab-cursor="true">
+        @for (card of top_slides; track card.id) {
+        <swiper-slide class="slide-img">
+          <img class="slide-img" [src]="card.image" />
+        </swiper-slide>
+        }
+
+
+      </swiper-container>
+    </div>
+    <div class="col-3 right-top">
+      <div class="tag">
+        <button type="button" class="btn minimal-price">
+          <i class="fas fa-dollar-sign"></i> Minimal Price
+        </button>
+      </div>
+      <div class="price">₦110,000</div>
+
+      <div class="present-icons text-small d-flex gap-3 align-items-center">
+        <span><i class="fas fa-tv"></i> Lounge </span>
+        <span><i class="fas fa-bed"></i> Rooms</span>
+        <span><i class="fas fa-toilet"></i> Toilet</span>
+
+      </div>
+      <span class="text-small">Minimal of 2 nights bookings</span><br>
+
+
+      <div class="feature-tags">
+        <span class="topic-small">FEATURES</span><br>
+
+        <button type="button" class="btn feature btn-outline-secondary">
+          <i class="fas fa-check-circle"></i> Pool <i class="fas fa-swimming-pool"></i>
+        </button>
+        <button type="button" class="btn feature btn-outline-secondary">
+          <i class="fas fa-check-circle"></i> Gym <i class="fas fa-dumbbell"></i>
+        </button>
+        <button type="button" class="btn feature btn-outline-secondary">
+          <i class="fas fa-check-circle"></i> Pool <i class="fas fa-swimming-pool"></i>
+        </button>
+        <button type="button" class="btn feature btn-outline-secondary">
+          <i class="fas fa-check-circle"></i> Washing Machine <i class="fas fa-tshirt"></i>
+        </button>
+        <button type="button" class="btn feature btn-outline-secondary">
+          <i class="fas fa-check-circle"></i> Gaming <i class="fas fa-gamepad"></i>
+        </button>
+        <button type="button" class="btn feature btn-outline-secondary">
+          <i class="fas fa-check-circle"></i> Air-Conditioning <i class="fas fa-wind"></i>
+        </button>
+        <button type="button" class="btn feature btn-outline-secondary">
+          <i class="fas fa-check-circle"></i> Balcony <i class="fas fa-door-open"></i>
+        </button>
+      </div>
+
+      <div class="lifestyle-tags">
+
+        <span class="topic-small">LIFESTYLE</span><br>
+        <button type="button" class="btn feature btn-outline-secondary">
+          <i class="fas fa-check-circle"></i> Pool <i class="fas fa-swimming-pool"></i>
+        </button>
+      </div>
+
+      <div class="container position-relative" style="height: 200px;">
+        <div class="d-flex flex-row picture-card align-items-center" style="max-width: 200px;">
+          <div class="image-stack-container">
+            <div class="image-stack">
+              <img src="../assets/images/bedroom1.jfif" class="stacked-img">
+              <img src="../assets/images/bedroom1.jfif" class="stacked-img">
+              <img src="../assets/images/bedroom1.jfif" class="stacked-img">
+              <img src="../assets/images/bedroom1.jfif" class="stacked-img">
+            </div>
+            <div class="nav-buttons">
+              <!-- <button class="nav-btn">&#8592;</button> -->
+              <a routerLink="/gallery" class="btn light ">Gallery &#8594;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+    </div>
+  </div>
+
+
+
+  <div class="bottomside row">
+    <div class="col-3 left-top">
+
+      <div>
+        <span class="topic-small">
+          DESCRIPTION
+        </span>
+      </div>
+      <div class="details-bottom"><span class="grey">Managed by</span> <br> Seahorse Kleindienst</div>
+
+
+
+    </div>
+    <div class="col-6 mid-bottom">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
+        lorem egestas vitae scel
+        <span id="dots">...</span>
+        <span id="more" style="display: none;">
+          erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae
+          massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim
+          ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+          venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.
+        </span>
+      </p>
+
+      <div class="btn-group mr-2" (click)="toggleReadMore()" role="group" aria-label="First group">
+        <button type="button" class="btn myBtn contact-us btn-dark" id="myBtn"></button>
+        <button type="button" class="btn btn-light contact-us-icon"><i class="fas fas fa-plus"></i></button>
+      </div>
+      <!-- <button (click)="toggleReadMore()" id="myBtn">Read more</button> -->
+
+    </div>
+    <div class="col-3 right-top">
+
+      <div class="container position-relative" style="height: 100px;">
+        <div class="card map-card p-3 d-flex flex-row align-items-center gap-3"
+          style="max-width: 200px; height: 100px;">
+          <!-- Profile Image -->
+          <img src="../assets/images/bedroom1.jfif" class="profile" alt="">
+
+
+          <a href="https://maps.app.goo.gl/yuduyzCDo3x73bxx5" target="_blank" style="text-decoration: none">
+            <div class="flex-grow-1 overlay">
+              <h6 class="mb-0 topic-small">Azeeza al-Sham</h6>
+              <small class="text-light text-small">View on Map</small>
+            </div>
+          </a>
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+  <div class="container mt-5">
+    <!-- Header -->
+    <div class="text-center mb-4">
+      <h1>Traverse Rugged Terrain</h1>
+      <p class="text-muted"><em>routine - trip</em></p>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <ul class="nav nav-tabs justify-content-center mb-4" id="terrainTabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="starting-tab" data-bs-toggle="tab" href="#">Available Apartments</a>
+      </li>
+      <!-- <li class="nav-item">
+      <a class="nav-link" id="brands-tab" data-bs-toggle="tab" href="#brands" class="nav-link" id="gps-tab" data-bs-toggle="Tab_Content">Second</a>
+    </li> -->
+    </ul>
+    <div class="tab-content" id="terrainTabsContent">
+      <div class="tab-pane fade show active" id="starting" role="tabpanel">
+        <div class="row">
+          @for (card of properties; track card.id) {
+          <div class="col-md-6 card-list col-lg-3 mb-4">
+            <div class="card card-list h-100 shadow-sm">
+              <img [src]="card.image" class="card-img-top" alt="{{ card.title }}">
+              <div class="card-body text-center">
+                <!-- <div><p style="font-size: 7px;" class="fas fa-circle"></p><span> {{card.available == 1? 'Available': "Occupied"}}</span> <span style="float: right;" class="right"> <i class="fas far fa-heart"> </i></span></div> -->
+                <h5 class="card-title">{{ card.title }}</h5>
+                <p class="card-subtitle text-muted">{{ card.description }}</p>
+                <div id="attribs"><span class="attrib"><i class="fas fa-bed"></i> {{card.bed}} bed </span> | <span class="attrib"><i class="fas fa-bath"> </i>{{card.bath}} bath </span> | <span class="attrib"><i class="fas fa-dumbbell"></i> gym</span></div>
+                <h3 class="card-price">₦{{ card.prices }}</h3>
+
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+      <!-- Add other tab panes similarly -->
+
+      
+    </div>
+
+
+  </div>

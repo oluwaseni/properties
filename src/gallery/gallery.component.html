@@ -1,0 +1,121 @@
+<div class="container mt-4">
+  <!-- <div class="property-header mb-4"></div> -->
+  <swiper-container class="mySwiper" space-between="40" slides-per-view="1.5" pagination="true"
+    pagination-clickable="true">
+    @for (card of cards; track card.id) {
+    <swiper-slide class="slide-img">
+      <img class="slide-img" height="500px" width="100%" [src]="card.image" />
+    </swiper-slide>
+    }
+  </swiper-container>
+
+  <div class="row property-details">
+    <div class="col-md-8">
+      <h2>Aruna - Type A</h2>
+      <p>Sensata Residences, Harmony Street No.12, Selhurst, London, England</p>
+
+      
+ <div class="container mt-4">
+    <div class="row">
+      <!-- Land & Building Size -->
+      <div class="col-md-4">
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fas fa-ruler-combined"></i></div>
+          <div class="feature-label">Land & Building Size</div>
+          <div class="feature-value">2,000 ft²</div>
+        </div>
+      </div>
+
+      <!-- House Style -->
+      <div class="col-md-4">
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fas fa-house-user"></i></div>
+          <div class="feature-label">House Style</div>
+          <div class="feature-value">Modern minimalist</div>
+        </div>
+      </div>
+
+      <!-- Total Floor -->
+      <div class="col-md-4">
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fas fa-building"></i></div>
+          <div class="feature-label">Total Floor</div>
+          <div class="feature-value">Double floor</div>
+        </div>
+      </div>
+
+      <!-- Bedrooms -->
+      <div class="col-md-4">
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fas fa-bed"></i></div>
+          <div class="feature-label">Bedrooms</div>
+          <div class="feature-value">3 bedrooms</div>
+        </div>
+      </div>
+
+      <!-- Bathrooms -->
+      <div class="col-md-4">
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fas fa-shower"></i></div>
+          <div class="feature-label">Bathrooms</div>
+          <div class="feature-value">2 bathrooms</div>
+        </div>
+      </div>
+
+      <!-- Cluster -->
+      <div class="col-md-4">
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fas fa-tree"></i></div>
+          <div class="feature-label">Cluster</div>
+          <div class="feature-value">Aruna residence</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      
+      <div class="section-title">About Kairios Properties</div>
+      <div class="about-properties">
+        Aquatic Residences offers modern residences with minimalist designs that blend in with the green surroundings,
+        providing comfort for dynamic families. Each unit is equipped with an open kitchen and a spacious living room
+        area.
+        Modern touches can be seen directly in the bedrooms and bathrooms that have a youthful minimalist design.
+      </div>
+    </div>
+    <div class="col-md-4 container">
+
+       <h2>Price and Payment</h2>
+      <p>Payment is made</p>
+
+      <table class="table table-bordered mt-3 mb-3">
+        <tr>
+          <td>Land & Building Size</td>
+          <td>2,000 ft²</td>
+        </tr>
+        <tr>
+          <td>House Style</td>
+          <td>Modern minimalist</td>
+        </tr>
+        <tr>
+          <td>Total Floor</td>
+          <td>Double floor</td>
+        </tr>
+        <tr>
+          <td>Bedrooms</td>
+          <td>3 bedrooms</td>
+        </tr>
+        <tr>
+          <td>Bathrooms</td>
+          <td>2 bathrooms</td>
+        </tr>
+        <tr class="table-info payNow">
+          <th colspan="2">Make Payment Now 
+            <!-- <button type="button" style="float: right;" class="btn right btn-secondary btn-lg">Large button</button> -->
+          </th>
+          
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>
