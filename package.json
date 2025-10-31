@@ -7,8 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:propertyrent-app": "node dist/propertyrent-app/server/server.mjs",
-    "gh-pages-build": "ng build --configuration production --baseHref ./ && rm -rf docs/* && cp -r dist/propertyrent-app/* docs/"
+    "serve:ssr:propertyrent-app": "node dist/propertyrent-app/server/server.mjs"
   },
   "private": true,
   "dependencies": {
