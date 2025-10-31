@@ -1,4 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { PropertyServiceService } from '../app/services/property-service.service';
+
 
 @Component({
   selector: 'app-gallery',
@@ -9,6 +11,21 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class GalleryComponent {
+
+
+  
+ constructor(private propertyService: PropertyServiceService) {}
+
+ property: any;
+
+  ngOnInit(): void {
+    this.property = this.propertyService.getSelectedProperty();
+
+    console.log(this.property)
+  }
+
+
+
   cards = [
     {
       id: 1,

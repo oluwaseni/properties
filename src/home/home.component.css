@@ -2,14 +2,28 @@
     height: 600px !important;
     padding: 2%;
 }
+
+.home-full{
+  overflow-x: hidden;
+}
 .bottomside{
     /* height: 600px !important; */
     padding: 10% 2% 2% 2%;
 }
 
-.home-full{
-    /* background-color: black; */
+.image-contain{
+  display: none;
 }
+.map-image{
+  display: none;
+  max-width: 200px; 
+  height: 100px;
+
+}
+.hide-desktop{
+display: none;
+}
+
 
 .mid-top{
     border-radius: 15px !important;
@@ -276,3 +290,171 @@
   /* font-size: 13px; */
   color: #757373;
 }
+
+
+/* Show desktop swiper by default */
+.swiper-desktop {
+  display: block;
+}
+.swiper-mobile {
+  display: none;
+}
+
+
+
+
+
+/* For tablets (max width 768px) */
+@media (max-width: 990px) {
+  .card-list {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .slide-img{
+    border-radius: 0px !important;
+}
+
+  
+.bottomside{ 
+  /* margin-top: 30%; */
+  background-color: #220e01;
+  /* display: none; */
+}
+
+.mid-bottom{
+  color: #ffffff;
+}
+
+.hide-b{
+  display: none;
+}
+
+
+  
+.mid-top{
+  position: absolute;
+  top: 8%;
+}
+
+.left-top{
+  z-index: 20;
+  /* background-color: #007bff; */
+}
+
+
+.right-top{
+  position: relative;
+  z-index: 30;
+  margin-top: 20%;
+  margin-bottom: 5%;
+}
+
+ /* .swiper-desktop {
+    display: none;
+  } */
+
+
+}
+
+/* For mobile (max width 576px) */
+@media (max-width: 576px) {
+ 
+.home-full{
+  position: relative;
+  width: 100% !important;
+    /* background-color: black; */
+
+}
+
+.details-bottom{
+  color: #ffffff;
+}
+
+.mid-top{
+  position: absolute;
+  top: 0%;
+}
+
+.right-top{
+  position: relative;
+  z-index: 30;
+  margin-top: 45%;
+  margin-bottom: 5%;
+  /* background-color: #007bff !important; */
+}
+
+
+.feature-tags{
+  position: relative;
+  margin-top: -2%;
+}
+
+.bottom-bottom{
+  position: relative;
+  margin-top: 20% !important;
+  /* background-color: #642a03; */
+}
+
+.mid-bottom{
+  color: #ffffff;
+}
+
+.hide-this{
+  display: none;
+}
+.tag{
+  display: none;
+}
+.price{
+  display: none;
+}
+
+.bottomside{ 
+  margin-top: 30%;
+  background-color: #220e01;
+  /* display: none; */
+}
+
+.left-top{
+  z-index: 20;
+  width: 60%;
+  padding-bottom: 10%;
+}
+
+
+ .swiper-desktop {
+    display: none;
+  }
+  .swiper-mobile {
+    display: block;
+  }
+
+  .map-image{
+  display: none;
+  width: 100%; 
+  height: 100px; 
+
+}
+
+.details{
+  /* color: #642a03; */
+}
+
+.right-bottom{
+  /* background-color: #007bff; */
+}
+
+.map-div{
+  float: right !important;
+}
+/* .hide-desktop{
+display: block;
+width: 50px !important;
+height: 10px;
+background-color: #007bff;
+} */
+
+}
+
+

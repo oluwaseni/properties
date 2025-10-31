@@ -55,3 +55,35 @@
         cursor: pointer;
     }
 
+    .pay-now{
+      background-color: #642a03;
+      font-weight: bold;
+      font-size: 30px;
+      color: #ffffff;
+    }
+    .call-now{
+      background-color: #ffffff;
+      font-weight: bold;
+      font-size: 30px;
+      color: #642a03;
+    }
+
+    .desktop-image{
+      display: block;
+    }
+    .mobile-image{
+      display: none;
+    }
+
+    
+
+/* For tablets (max width 768px) */
+@media (max-width: 990px) {
+  .desktop-image{
+      display: none;
+    }
+    .mobile-image{
+      display: block;
+    }
+
+}

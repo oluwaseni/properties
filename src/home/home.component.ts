@@ -1,5 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
+import { PropertyServiceService } from '../app/services/property-service.service';
 
 @Component({
   selector: 'app-home',
@@ -12,14 +13,36 @@ import { RouterLink } from "@angular/router";
 export class HomeComponent {
 
  
+constructor(private router: Router, private propertyService: PropertyServiceService) {}
+swiperEffect = 'cards'; // default effect
 isHidden = true;
 
   ngOnInit() {
+
+        
+this.setSwiperEffect();
+    window.addEventListener('resize', () => this.setSwiperEffect());
+
     const btnText = document.getElementById("myBtn") as HTMLButtonElement;
     if (btnText) {
       btnText.innerHTML = this.isHidden ? "Read more" : "Read less";
     }
+
+
   }
+
+  
+setSwiperEffect() {
+    const width = window.innerWidth;
+    if (width <= 576) {
+      this.swiperEffect = 'slide'; // simpler effect for mobile
+    } else if (width <= 768) {
+      this.swiperEffect = 'fade';
+    } else {
+      this.swiperEffect = 'cards'; // desktop effect
+    }
+  }
+
 
   toggleReadMore(): void {
   const dots = document.getElementById("dots") as HTMLElement;
@@ -36,10 +59,22 @@ isHidden = true;
 }
 
 
+goToDetails(card: any) {
+  this.propertyService.setSelectedProperty(card);
+  this.router.navigate(['/property', card.id]);
+}
+
+
+
 properties = [
     {
-      id: 1,
-      image:  '../assets/images/bedroom1.jfif',
+      id: "pent-house",
+      'image': [  '../assets/images/bedroom1.jfif',
+        '../assets/images/bedroom1.jfif',
+        '../assets/images/bedroom1.jfif',
+        '../assets/images/bedroom1.jfif'
+
+      ],
       title: 'Pent House',
       prices: '110,000',
       bed: '2',
@@ -49,8 +84,12 @@ properties = [
       description: '2 Bedroom en-suite'
     },
     {
-      id: 2,
-      image: '../assets/images/bedroom1.jfif',
+      id: "deluxe",
+      'image': [  '../assets/images/bedroom1.jfif',
+        '../assets/images/bedroom1.jfif',
+        '../assets/images/bedroom1.jfif'
+
+      ],
       title: 'Deluxe Plus',
       prices: '100,000',
       bed: '2',
@@ -60,8 +99,12 @@ properties = [
       description: '2 Bedroom en-suite'
     },
     {
-      id: 3,
-      image: '../assets/images/bedroom1.jfif',
+      id: "two-bed-ensuite",
+      'image': [  '../assets/images/bedroom1.jfif',
+        '../assets/images/bedroom1.jfif',
+        '../assets/images/bedroom1.jfif'
+
+      ],
       title: 'Deluxe',
       prices: '95,000',
       bed: '2',
@@ -71,8 +114,12 @@ properties = [
       description: '2 Bedroom en-suite'
     },
     {
-      id: 4,
-      image: '../assets/images/bedroom1.jfif',
+      id: "one-bed-ensuite",
+      'image': [  '../assets/images/bedroom1.jfif',
+        '../assets/images/bedroom1.jfif',
+        '../assets/images/bedroom1.jfif'
+
+      ],
       title: '1 Bed Apartment',
       prices: '75,000',
       bed: '1',
@@ -82,8 +129,12 @@ properties = [
       description: '1 Bedroom en-suite'
     },
     {
-      id: 5,
-      image: '../assets/images/bedroom1.jfif',
+      id: "one-bed",
+      'image': [  '../assets/images/bedroom1.jfif',
+        '../assets/images/bedroom1.jfif',
+        '../assets/images/bedroom1.jfif'
+
+      ],
       title: 'Studio Apartment',
       prices: '52,000',
       bed: '1',

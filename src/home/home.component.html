@@ -1,31 +1,28 @@
 <div class="home-full">
-  <app-topbanner></app-topbanner>
+  <!-- <app-topbanner></app-topbanner> -->
 
 
 
   <div class="topside row">
-    <div class="col-3 left-top">
+    <div class="col-12 col-md-6 col-lg-3 left-top">
 
       <div>
         <button class="btn">
           <i class="fas fa-house"></i> Lagos > Victoria Island
         </button>
       </div>
-      <div class="details">2 Bedroom Villa at The Floating Seahorse by Kleindienst</div>
+      <div class="details">Shortlet Apartments and Villa at The Floating Seahorse by Kleindienst</div>
 
       <div class="contact-tags">
 
 
-        <!-- <button type="button" class="btn feature-contact-us btn-outline-secondary">
-          <i class="fas fa-phone"></i> Contact Us Now
-        </button> -->
         <div class="btn-group mr-2" role="group" aria-label="First group">
           <button type="button" class="btn btn-light contact-us-icon"><i class="fas fa-phone"></i></button>
           <button type="button" class="btn contact-us btn-dark">Contact Us Now</button>
         </div>
 
       </div>
-      <div class="container position-relative" style="height: 300px;">
+      <div class="container position-relative hide-this" style="height: 300px;">
         <div class="contact-card p-3 d-flex flex-row align-items-center gap-3" style="max-width: 300px;">
           <!-- Profile Image -->
           <img src="../assets/images/bedroom1.jfif" class="profile" alt="">
@@ -44,7 +41,7 @@
       </div>
 
     </div>
-    <div class="col-6 mid-top">
+    <div class="swiper-desktop col-12 col-md-12 col-lg-6 mid-top">
       <swiper-container effect="cards" grab-cursor="true">
         @for (card of top_slides; track card.id) {
         <swiper-slide class="slide-img">
@@ -55,13 +52,24 @@
 
       </swiper-container>
     </div>
-    <div class="col-3 right-top">
+    <div class="swiper-mobile col-12 col-md-6 col-lg-6 mid-top">
+      <swiper-container effect="slide" grab-cursor="true">
+        @for (card of top_slides; track card.id) {
+        <swiper-slide class="slide-img">
+          <img class="slide-img" [src]="card.image" />
+        </swiper-slide>
+        }
+
+
+      </swiper-container>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3 right-top">
       <div class="tag">
         <button type="button" class="btn minimal-price">
           <i class="fas fa-dollar-sign"></i> Minimal Price
         </button>
       </div>
-      <div class="price">₦110,000</div>
+      <div class="price">₦220,000</div>
 
       <div class="present-icons text-small d-flex gap-3 align-items-center">
         <span><i class="fas fa-tv"></i> Lounge </span>
@@ -69,7 +77,7 @@
         <span><i class="fas fa-toilet"></i> Toilet</span>
 
       </div>
-      <span class="text-small">Minimal of 2 nights bookings</span><br>
+      <span class="text-small hide-this">Minimal of 2 nights bookings</span><br>
 
 
       <div class="feature-tags">
@@ -98,7 +106,7 @@
         </button>
       </div>
 
-      <div class="lifestyle-tags">
+      <div class="lifestyle-tags hide-this hide-b">
 
         <span class="topic-small">LIFESTYLE</span><br>
         <button type="button" class="btn feature btn-outline-secondary">
@@ -106,7 +114,7 @@
         </button>
       </div>
 
-      <div class="container position-relative" style="height: 200px;">
+      <div class="container image-contain position-relative hide-this" style="height: 200px;">
         <div class="d-flex flex-row picture-card align-items-center" style="max-width: 200px;">
           <div class="image-stack-container">
             <div class="image-stack">
@@ -133,7 +141,7 @@
 
 
 
-  <div class="bottomside row">
+  <div id="about" class="bottomside row">
     <div class="col-3 left-top">
 
       <div>
@@ -146,7 +154,7 @@
 
 
     </div>
-    <div class="col-6 mid-bottom">
+    <div class="col-12 col-md-8 col-lg-6 mid-bottom">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
         lorem egestas vitae scel
@@ -166,9 +174,9 @@
       <!-- <button (click)="toggleReadMore()" id="myBtn">Read more</button> -->
 
     </div>
-    <div class="col-3 right-top">
+    <div class="col-12 col-lg-3 right-top right-bottom">
 
-      <div class="container position-relative" style="height: 100px;">
+      <div class="container position-relative map-div" style="height: 100px;">
         <div class="card map-card p-3 d-flex flex-row align-items-center gap-3"
           style="max-width: 200px; height: 100px;">
           <!-- Profile Image -->
@@ -177,7 +185,7 @@
 
           <a href="https://maps.app.goo.gl/yuduyzCDo3x73bxx5" target="_blank" style="text-decoration: none">
             <div class="flex-grow-1 overlay">
-              <h6 class="mb-0 topic-small">Azeeza al-Sham</h6>
+              <h6 class="mb-0 topic-small">KTP Apartments</h6>
               <small class="text-light text-small">View on Map</small>
             </div>
           </a>
@@ -186,17 +194,20 @@
         </div>
       </div>
 
+      
+     
+
 
 
     </div>
   </div>
 
 
-  <div class="container mt-5">
+  <div id="properties" class="container mt-5 bottom-bottom">
     <!-- Header -->
     <div class="text-center mb-4">
-      <h1>Traverse Rugged Terrain</h1>
-      <p class="text-muted"><em>routine - trip</em></p>
+      <h1>Home Away From Home </h1>
+      <p class="text-muted"><em>Clean - Lifestyle</em></p>
     </div>
 
     <!-- Navigation Tabs -->
@@ -213,17 +224,19 @@
         <div class="row">
           @for (card of properties; track card.id) {
           <div class="col-md-6 card-list col-lg-3 mb-4">
+            <div (click)="goToDetails(card)" class="card card-list h-100 shadow-sm">
             <div class="card card-list h-100 shadow-sm">
-              <img [src]="card.image" class="card-img-top" alt="{{ card.title }}">
+              <img [src]="card.image[0]" class="card-img-top" alt="{{ card.title }}">
               <div class="card-body text-center">
                 <!-- <div><p style="font-size: 7px;" class="fas fa-circle"></p><span> {{card.available == 1? 'Available': "Occupied"}}</span> <span style="float: right;" class="right"> <i class="fas far fa-heart"> </i></span></div> -->
-                <h5 class="card-title">{{ card.title }}</h5>
+                <h5 class="card-title">{{ swiperEffect }}</h5>
                 <p class="card-subtitle text-muted">{{ card.description }}</p>
                 <div id="attribs"><span class="attrib"><i class="fas fa-bed"></i> {{card.bed}} bed </span> | <span class="attrib"><i class="fas fa-bath"> </i>{{card.bath}} bath </span> | <span class="attrib"><i class="fas fa-dumbbell"></i> gym</span></div>
                 <h3 class="card-price">₦{{ card.prices }}</h3>
 
               </div>
             </div>
+          </div>
           </div>
           }
         </div>
@@ -235,3 +248,6 @@
 
 
   </div>
+
+  
+  <app-footer></app-footer>

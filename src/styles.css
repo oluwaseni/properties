@@ -6,5 +6,34 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  padding: 4%;
+  overflow-x: hidden;
 }
+
+
+/* For tablets (max width 768px) */
+@media (min-width: 769px) {
+  
+body {
+  
+  padding: 2%;
+}
+}
+/* For tablets (max width 768px) */
+@media (max-width: 990px) {
+  
+body {
+  
+  padding: 0% !important;
+}
+}
+
+/* For mobile (max width 576px) */
+@media (max-width: 576px) {
+body {
+  background-image: url("./assets/bag-abstract.webp");
+  background-color: black !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+}
+

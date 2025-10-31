@@ -9,7 +9,7 @@ export const routes: Routes = [
       import('../home/home.component').then((m) => m.HomeComponent),
   },
   {
-    path: 'gallery',
+    path: 'property/:id',
     loadComponent: () =>
       import('../gallery/gallery.component').then((m) => m.GalleryComponent),
   },
