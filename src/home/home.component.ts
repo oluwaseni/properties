@@ -1,11 +1,12 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Router, RouterLink } from "@angular/router";
 import { PropertyServiceService } from '../app/services/property-service.service';
+import { PropertiesComponent } from "../app/properties/properties.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, PropertiesComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
