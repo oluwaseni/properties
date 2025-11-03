@@ -18,10 +18,10 @@ constructor(private router: Router, private propertyService: PropertyServiceServ
 properties = [
     {
       id: "pent-house",
-      'image': [  '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif'
+      'image': [  '../properties/assets/images/3.png',
+        '../properties/assets/images/1.png',
+        '../properties/assets/images/6.png',
+        '../properties/assets/images/5.png'
 
       ],
       title: 'Pent House',
@@ -34,9 +34,9 @@ properties = [
     },
     {
       id: "deluxe",
-      'image': [  '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif'
+      'image': [  '../properties/assets/images/3.png',
+        '../properties/assets/images/9.png',
+        '../properties/assets/images/14.png'
 
       ],
       title: 'Deluxe Plus',
@@ -49,9 +49,9 @@ properties = [
     },
     {
       id: "two-bed-ensuite",
-      'image': [  '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif'
+      'image': [  '../properties/assets/images/2.png',
+        '../properties/assets/images/1.png',
+        '../properties/assets/images/3.png'
 
       ],
       title: 'Deluxe',
@@ -64,9 +64,9 @@ properties = [
     },
     {
       id: "one-bed-ensuite",
-      'image': [  '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif'
+      'image': [  '../properties/assets/images/7.png',
+        '../properties/assets/images/8.png',
+        '../properties/assets/images/9.png'
 
       ],
       title: '1 Bed Apartment',
@@ -79,9 +79,9 @@ properties = [
     },
     {
       id: "one-bed",
-      'image': [  '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif'
+      'image': [  '../properties/assets/images/12.png',
+        '../properties/assets/images/2.png',
+        '../properties/assets/images/1.png'
 
       ],
       title: 'Studio Apartment',

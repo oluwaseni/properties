@@ -70,10 +70,10 @@ goToDetails(card: any) {
 properties = [
     {
       id: "pent-house",
-      'image': [  '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif'
+      'image': [  '../properties/assets/images/bedroom1.jfif',
+        '../properties/assets/images/bedroom1.jfif',
+        '../properties/assets/images/bedroom1.jfif',
+        '../properties/assets/images/bedroom1.jfif'
 
       ],
       title: 'Pent House',
@@ -86,9 +86,9 @@ properties = [
     },
     {
       id: "deluxe",
-      'image': [  '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif'
+      'image': [  '../properties/assets/images/bedroom1.jfif',
+        '../properties/assets/images/bedroom1.jfif',
+        '../properties/assets/images/bedroom1.jfif'
 
       ],
       title: 'Deluxe Plus',
@@ -101,9 +101,9 @@ properties = [
     },
     {
       id: "two-bed-ensuite",
-      'image': [  '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif'
+      'image': [  '../properties/assets/images/bedroom1.jfif',
+        '../properties/assets/images/bedroom1.jfif',
+        '../properties/assets/images/bedroom1.jfif'
 
       ],
       title: 'Deluxe',
@@ -116,9 +116,9 @@ properties = [
     },
     {
       id: "one-bed-ensuite",
-      'image': [  '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif'
+      'image': [  '../properties/assets/images/bedroom1.jfif',
+        '../properties/assets/images/bedroom1.jfif',
+        '../properties/assets/images/bedroom1.jfif'
 
       ],
       title: '1 Bed Apartment',
@@ -131,9 +131,9 @@ properties = [
     },
     {
       id: "one-bed",
-      'image': [  '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif',
-        '../assets/images/bedroom1.jfif'
+      'image': [  '../properties/assets/images/bedroom1.jfif',
+        '../properties/assets/images/bedroom1.jfif',
+        '../properties/assets/images/bedroom1.jfif'
 
       ],
       title: 'Studio Apartment',
@@ -151,25 +151,25 @@ properties = [
 top_slides = [
     {
       id: 1,
-      image:  '../assets/images/bedroom1.jfif',
+      image:  '../properties/assets/images/11.png',
       title: 'Mountain Trail',
       description: 'Explore the rocky paths with confidence and style.'
     },
     {
       id: 2,
-      image: '../assets/images/bedroom1.jfif',
+      image: '../properties/assets/images/5.png',
       title: 'Desert Drive',
       description: 'Navigate the dunes with powerful off-road vehicles.'
     },
     {
       id: 3,
-      image: '../assets/images/bedroom1.jfif',
+      image: '../properties/assets/images/13.png',
       title: 'Forest Route',
       description: 'Immerse yourself in nature with guided GPS trails.'
     },
     {
       id: 4,
-      image: '../assets/images/bedroom1.jfif',
+      image: '../properties/assets/images/4.png',
       title: 'Snow Expedition',
       description: 'Conquer icy terrains with advanced traction systems.'
     }
