@@ -3,6 +3,10 @@
     padding: 2%;
 }
 
+.lifestyle-tags{
+  display: none;
+}
+
 .home-full{
   overflow-x: hidden;
 }
