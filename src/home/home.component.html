@@ -13,7 +13,8 @@
       </div>
       <div class="details">Shortlet Apartments at Ikota-Villa Estate, Lekki, Lagos Island</div>
 
-      <div class="contact-tags">
+      <a href="tel:+234 808 167 8368">
+        <div class="contact-tags">
 
 
         <div class="btn-group mr-2" role="group" aria-label="First group">
@@ -22,10 +23,11 @@
         </div>
 
       </div>
+      </a>
       <div class="container position-relative hide-this" style="height: 300px;">
         <div class="contact-card p-3 d-flex flex-row align-items-center gap-3" style="max-width: 300px;">
           <!-- Profile Image -->
-          <img src="../assets/images/bedroom1.jfif" class="profile" alt="">
+          <img src="../properties/assets/images/11.png" class="profile" alt="">
 
           <!-- Agent Info -->
           <div class="flex-grow-1">
@@ -33,16 +35,16 @@
             <small class="text-muted text-small">Property Consultant</small>
           </div>
 
-          <!-- Contact Button -->
+          <!-- Contact Button --><a href="tel:+234 808 167 8368">
           <button class="btn btn-sm d-flex align-items-center gap-1 feature-contact">
             <i class="fas fa-phone"></i> Contact
-          </button>
+          </button></a>
         </div>
       </div>
 
     </div>
     <div class="swiper-desktop col-12 col-md-12 col-lg-6 mid-top">
-      <swiper-container effect="cards" grab-cursor="true">
+      <swiper-container effect="cards" grab-cursor="true" navigation="true">
         @for (card of top_slides; track card.id) {
         <swiper-slide class="slide-img">
           <img class="slide-img" [src]="card.image" />
@@ -53,7 +55,7 @@
       </swiper-container>
     </div>
     <div class="swiper-mobile col-12 col-md-6 col-lg-6 mid-top">
-      <swiper-container effect="slide" grab-cursor="true">
+      <swiper-container effect="slide" grab-cursor="true" navigation="true">
         @for (card of top_slides; track card.id) {
         <swiper-slide class="slide-img">
           <img class="slide-img" [src]="card.image" />
@@ -64,22 +66,7 @@
       </swiper-container>
     </div>
     <div class="col-12 col-md-6 col-lg-3 right-top">
-      <div class="tag">
-        <button type="button" class="btn minimal-price">
-          <i class="fas fa-dollar-sign"></i> Minimal Price
-        </button>
-      </div>
-      <div class="price">₦52,000</div>
-
-      <div class="present-icons text-small d-flex gap-3 align-items-center">
-        <span><i class="fas fa-tv"></i> Lounge </span>
-        <span><i class="fas fa-bed"></i> Rooms</span>
-        <span><i class="fas fa-toilet"></i> Toilet</span>
-
-      </div>
-      <span class="text-small hide-this">Minimal of 2 nights bookings</span><br>
-
-
+     
       <div class="feature-tags">
         <span class="topic-small">FEATURES</span><br>
 
@@ -115,10 +102,10 @@
         <div class="d-flex flex-row picture-card align-items-center" style="max-width: 200px;">
           <div class="image-stack-container">
             <div class="image-stack">
-              <img src="../propertyrent-app/assets/images/6.png" class="stacked-img">
-              <img src="../propertyrent-app/assets/images/6.png" class="stacked-img">
-              <img src="../propertyrent-app/assets/images/6.png" class="stacked-img">
-              <img src="../propertyrent-app/assets/images/6.png" class="stacked-img">
+              <img src="../properties/assets/images/11.png" class="stacked-img">
+              <img src="../properties/assets/images/11.png" class="stacked-img">
+              <img src="../properties/assets/images/11.png" class="stacked-img">
+              <img src="../properties/assets/images/11.png" class="stacked-img">
             </div>
             <div class="nav-buttons">
               <!-- <button class="nav-btn">&#8592;</button> -->
@@ -153,15 +140,14 @@
     </div>
     <div class="col-12 col-md-8 col-lg-6 mid-bottom">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
-        lorem egestas vitae scel
+        <b>Welcome to KTP Suites,</b> where luxury meets lifestyle. We are a premier Shortlet apartment company dedicated to redefining temporary stays with elegance, comfort, and sophistication. Whether you’re traveling for business, leisure, or a special occasion, our curated spaces offer more than just accommodation, they deliver an experience.
         <span id="dots">...</span>
-        <span id="more" style="display: none;">
-          erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae
-          massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim
-          ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida bebrrbr
-          venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.
+        <span id="more" style="display: none;"><br><br>
+          Each apartment is a masterpiece of design, blending modern aesthetics with timeless charm. From plush furnishings to high-end amenities, 
+          we ensure every detail reflects our commitment to excellence. 
+          Our property is strategically located in a vibrant neighborhood, offering convenience, security, and a taste of the city’s finest attractions.
         </span>
+      
       </p>
 
       <div class="btn-group mr-2" (click)="toggleReadMore()" role="group" aria-label="First group">
@@ -177,10 +163,10 @@
         <div class="card map-card p-3 d-flex flex-row align-items-center gap-3"
           style="max-width: 200px; height: 100px;">
           <!-- Profile Image -->
-          <img src="../assets/images/bedroom1.jfif" class="profile" alt="">
+          <img src="../properties/assets/images/11.png" class="profile" alt="">
 
 
-          <a href="https://maps.app.goo.gl/yuduyzCDo3x73bxx5" target="_blank" style="text-decoration: none">
+          <a href="https://maps.app.goo.gl/s938xgrYkZmB1uVa8?g_st=ipc" target="_blank" style="text-decoration: none">
             <div class="flex-grow-1 overlay">
               <h6 class="mb-0 topic-small">KTP Apartments</h6>
               <small class="text-light text-small">View on Map</small>

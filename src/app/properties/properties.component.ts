@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { SlicePipe } from '@angular/common';
+
 import { PropertyServiceService } from '../services/property-service.service';
 
 @Component({
   selector: 'app-properties',
   standalone: true,
-  imports: [],
+  imports: [SlicePipe],
   templateUrl: './properties.component.html',
   styleUrl: './properties.component.css'
 })
@@ -21,6 +23,7 @@ properties = [
       'image': [  '../properties/assets/images/3.png',
         '../properties/assets/images/1.png',
         '../properties/assets/images/6.png',
+        '../properties/assets/images/4.png',
         '../properties/assets/images/5.png'
 
       ],
@@ -30,7 +33,7 @@ properties = [
       bath: '3',
       available: 1,
       love: 1,
-      description: '2 Bedroom en-suite'
+      description: 'Pent floor: Private executive balcony, elaborate layout and Private laundry'
     },
     {
       id: "deluxe",
@@ -49,9 +52,9 @@ properties = [
     },
     {
       id: "two-bed-ensuite",
-      'image': [  '../properties/assets/images/2.png',
+      'image': [  '../properties/assets/images/3.png',
         '../properties/assets/images/1.png',
-        '../properties/assets/images/3.png'
+        '../properties/assets/images/6.png'
 
       ],
       title: 'Deluxe',
@@ -64,8 +67,8 @@ properties = [
     },
     {
       id: "one-bed-ensuite",
-      'image': [  '../properties/assets/images/7.png',
-        '../properties/assets/images/8.png',
+      'image': [  '../properties/assets/images/12.png',
+        '../properties/assets/images/1.png',
         '../properties/assets/images/9.png'
 
       ],
@@ -78,9 +81,9 @@ properties = [
       description: '1 Bedroom en-suite'
     },
     {
-      id: "one-bed",
-      'image': [  '../properties/assets/images/12.png',
-        '../properties/assets/images/2.png',
+      id: "studio",
+      'image': [  '../properties/assets/images/7.png',
+        '../properties/assets/images/16.png',
         '../properties/assets/images/1.png'
 
       ],

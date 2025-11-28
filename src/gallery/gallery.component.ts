@@ -23,6 +23,7 @@ export class GalleryComponent {
 
     console.log(this.property)
   }
+  
 
 
 
@@ -52,4 +53,16 @@ export class GalleryComponent {
       description: 'Conquer icy terrains with advanced traction systems.'
     }
   ];
+
+  
+ contacts = [
+    { number: '+234 808 167 8368', hidden: true },
+    { number: '+234 803 335 3235', hidden: true },
+    { number: '+234 803 329 4037', hidden: true }
+  ];
+
+  revealNumbers(): void {
+    this.contacts = this.contacts.map(c => ({ ...c, hidden: false }));
+  }
+
 }

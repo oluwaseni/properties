@@ -6,6 +6,16 @@
 
 }
 
+.socials{font-size: 15px;
+        margin-top: -3px;
+        text-decoration: none;
+        color: #642a03;
+}
+
+/* .fas, .fab{
+    color: #642a03;
+} */
+
 .contact-us-icon{
      border-radius: 20px;
      font-size: 13px;  

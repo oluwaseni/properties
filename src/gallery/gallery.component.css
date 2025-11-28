@@ -7,6 +7,12 @@
   border-radius: 8px;
 }
 
+swiper-container {
+  --swiper-navigation-color: #6b3b00; /* Change arrow color */
+  --swiper-navigation-size: 30px;     /* Optional: arrow size */
+}
+
+
 .property-details table {
   font-size: 0.95rem;
 }
@@ -60,12 +66,14 @@
       font-weight: bold;
       font-size: 30px;
       color: #ffffff;
+      width: 100% !important;
     }
     .call-now{
       background-color: #ffffff;
       font-weight: bold;
-      font-size: 30px;
+      font-size: 20px;
       color: #642a03;
+      width: 100% !important;
     }
 
     .desktop-image{

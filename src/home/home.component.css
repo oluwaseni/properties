@@ -94,18 +94,7 @@ display: none;
      font-size: 13px;  
      padding: 5px 7px;
 }
-.minimal-price{
-    padding: 2px 5px 2px 1px !important;
-    margin: 2px !important;
-    border-radius: 10px !important;
-    font-size: 12px;
-    background-color: #e7e7e7;
-}
 
-.price{
-    font-size: 25px;
-    font-weight: bolder;
-}
 .details{
     font-size: 40px;
     line-height: 2.5rem;
@@ -264,9 +253,17 @@ display: none;
 }
 
 
+swiper-container {
+  --swiper-navigation-color: #6b3b00; /* Change arrow color */
+  --swiper-navigation-size: 30px;     /* Optional: arrow size */
+}
+
+
+
 /* Show desktop swiper by default */
 .swiper-desktop {
   display: block;
+  color: #642a03 !important;
 }
 .swiper-mobile {
   display: none;

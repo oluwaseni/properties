@@ -27,7 +27,9 @@
               <div class="card-body text-center">
                 <!-- <div><p style="font-size: 7px;" class="fas fa-circle"></p><span> {{card.available == 1? 'Available': "Occupied"}}</span> <span style="float: right;" class="right"> <i class="fas far fa-heart"> </i></span></div> -->
                 <h5 class="card-title">{{ card.title }}</h5>
-                <p class="card-subtitle text-muted">{{ card.description }}</p>
+                <p class="card-subtitle text-muted">
+  {{ card.description | slice:0:20 }}{{ card.description.length > 20 ? '...' : '' }}
+</p>
                 <div id="attribs"><span class="attrib"><i class="fas fa-bed"></i> {{card.bed}} bed </span> | <span class="attrib"><i class="fas fa-bath"> </i>{{card.bath}} bath </span> | <span class="attrib"><i class="fas fa-dumbbell"></i> gym</span></div>
                 <h3 class="card-price">₦{{ card.prices }}</h3>
 

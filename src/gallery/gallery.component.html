@@ -1,7 +1,7 @@
 @if (property) {
   <div class="container mt-4">
   <div class="property-images desktop-image mb-4">
-  <swiper-container class="mySwiper" space-between="40" slides-per-view="1.5" pagination="true"
+  <swiper-container class="mySwiper" space-between="40" slides-per-view="1.5"  navigation="true"
     pagination-clickable="true">
     @for (card of property.image; track card.id) {
     <swiper-slide class="slide-img">
@@ -12,7 +12,7 @@
   </div>
 
   <div class="property-images mobile-image mb-4">
-  <swiper-container class="mySwiper" space-between="0" slides-per-view="1" pagination="true"
+  <swiper-container class="mySwiper" space-between="0" slides-per-view="1"  navigation="true"
     pagination-clickable="true">
     @for (card of property.image; track card.id) {
     <swiper-slide class="slide-img">
@@ -30,30 +30,12 @@
       
  <div class="container mt-4">
     <div class="row">
-      <!-- Land & Building Size -->
-      <div class="col-md-4">
-        <div class="feature-box">
-          <div class="feature-icon"><i class="fas fa-ruler-combined"></i></div>
-          <div class="feature-label">Land & Property Size</div>
-          <div class="feature-value">2,000 ft²</div>
-        </div>
-      </div>
-
       <!-- House Style -->
       <div class="col-md-4">
         <div class="feature-box">
           <div class="feature-icon"><i class="fas fa-house-user"></i></div>
           <div class="feature-label">House Style</div>
-          <div class="feature-value">Modern minimalist</div>
-        </div>
-      </div>
-
-      <!-- Total Floor -->
-      <div class="col-md-4">
-        <div class="feature-box">
-          <div class="feature-icon"><i class="fas fa-building"></i></div>
-          <div class="feature-label">Floor</div>
-          <div class="feature-value">Double floor</div>
+          <div class="feature-value">Modern</div>
         </div>
       </div>
 
@@ -79,20 +61,25 @@
       <div class="col-md-4">
         <div class="feature-box">
           <div class="feature-icon"><i class="fas fa-tree"></i></div>
-          <div class="feature-label">Cluster</div>
-          <div class="feature-value">Aruna residence</div>
+          <div class="feature-label">Lifestyle</div>
+          <div class="feature-value">Green</div>
         </div>
       </div>
     </div>
   </div>
 
       
-      <div class="section-title">About Kairios Properties</div>
+      <div class="section-title">Our Core Values</div>
       <div class="about-properties">
-        Aquatic Residences offers modern residences with minimalist designs that blend in with the green surroundings,
-        providing comfort for dynamic families. Each unit is equipped with an open kitchen and a spacious living room
-        area.
-        Modern touches can be seen directly in the bedrooms and bathrooms that have a youthful minimalist design.
+        <ul>
+          <li>Excellence: We pursue perfection in every detail, from interior design to guest services.</li>
+          <li>Integrity: Transparency and trust are the foundation of our relationships with guests, partners, and the community.</li>
+          <li>Hospitality: We treat every guest like royalty, ensuring personalized service and memorable stays.</li>
+          <li>Innovation: We embrace technology and creativity to enhance comfort and convenience.</li>
+          <li>Sustainability: We are committed to eco-friendly practices that respect our environment and future.</li>
+          
+        </ul>
+        At KTP Suites, we don’t just provide a place to stay, we create a sanctuary where elegance, comfort, and purpose converge. Discover the art of refined living with us.
       </div>
     </div>
     <div class="col-md-4 container">
@@ -101,26 +88,23 @@
       <p>Payment is made</p>
 
       <table class="table table-bordered mt-3 mb-3">
-        <tr>
-          <td>Land & Building Size</td>
-          <td>2,000 ft²</td>
-        </tr>
-        <tr>
-          <td>House Style</td>
-          <td>Modern minimalist</td>
-        </tr>
-        <tr>
-          <td>Total Floor</td>
-          <td>Double floor</td>
-        </tr>
-        <tr>
-          <td>Bedrooms</td>
-          <td>{{ property.bed}} bedrooms</td>
-        </tr>
-        <tr>
-          <td>Bathrooms</td>
-          <td>{{ property.bath}} bathrooms</td>
-        </tr>
+     
+@for (contact of contacts; track contact.number) {
+  <tr>
+    <th>Contact:</th>
+    <td>
+      @if (!contact.hidden) {
+        <a [href]="'tel:' + contact.number">{{ contact.number }}</a>
+      } @else {
+        xxxxxxxxxx
+      }
+    </td>
+  </tr>
+}
+
+
+      
+       
         <tr class="table-info payNow">
           <th colspan="2">
             <!-- <button type="button" style="float: right;" class="btn right btn-secondary btn-lg">Large button</button> -->
@@ -134,7 +118,10 @@
     <!-- <button class="btn btn-secondary  btn-lg">{{ property.prices}}</button> -->
       <div class="d-grid gap-2">
   <button class="btn pay-now" type="button">₦ {{ property.prices}}</button>
-  <button class="btn pay-now call-now" type="button">Call to Book </button>
+  
+  <button (click)="revealNumbers()" class="btn call-now" type="button"><i class="fas fas fa-phone-alt"></i> Reveal Contacts </button>
+
+  
 </div>
     </div>
   </div>

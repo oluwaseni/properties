@@ -173,6 +173,13 @@ top_slides = [
       title: 'Snow Expedition',
       description: 'Conquer icy terrains with advanced traction systems.'
     }
+    ,
+    {
+      id: 5,
+      image: '../properties/assets/images/15.png',
+      title: 'Snow Expedition',
+      description: 'Conquer icy terrains with advanced traction systems.'
+    }
   ];
 
 
