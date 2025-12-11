@@ -1,0 +1,86 @@
+
+<!-- src/app/contact-us/contact-us.component.html -->
+
+<!-- HERO (navy background, text left, image right) -->
+<section class="contact-hero position-relative">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <!-- Text -->
+      <div class="col-12 col-lg-6 text-white mb-4 mb-lg-0">
+        <h1 class="display-5 fw-bold mb-3">{{ hero.title }}</h1>
+        <p class="lead mb-4 hero-subtitle">
+          {{ hero.subtitle }}
+        </p>
+
+        <div class="d-flex flex-wrap gap-3">
+          <a class="btn btn-light btn-lg" [href]="'tel:+2348033353235'">
+            <i class="fas fa-phone me-2"></i> Call us
+          </a>
+          <a class="btn btn-outline-light btn-lg" [href]="'mailto:' + quick.mail">
+            <i class="fas fa-envelope me-2"></i> Email us
+          </a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="col-12 col-lg-6">
+        <div class="hero-image-wrapper rounded-3 overflow-hidden shadow">
+          <img [src]="hero.image" alt="Contact {{ brand }}" class="w-100 hero-image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative shape (orange) bottom-left -->
+  <div class="accent-shape d-none d-md-block"></div>
+</section>
+
+<!-- Quick contact strip -->
+<div class="contact-strip text-center py-2">
+  <span class="fw-semibold">
+    <i class="fas fa-phone me-2"></i> {{ quick.phone }}
+  </span>
+  <span class="mx-2">•</span>
+  <span>
+    <i class="fas fa-envelope me-2"></i> {{ quick.mail }}
+  </span>
+</div>
+
+<!-- Cards row -->
+<section class="container my-5">
+  <div class="row g-4">
+    @for (card of cards; track card.title) {
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card contact-card h-100 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <span class="icon-pill me-3"><i [class]="card.icon"></i></span>
+              <h5 class="card-title mb-0">{{ card.title }}</h5>
+            </div>
+            <p class="card-text text-muted">{{ card.body }}</p>
+            <a [href]="card.href" class="btn call-btn">
+              {{ card.ctaText }}
+            </a>
+          </div>
+        </div>
+      </div>
+    }
+    <!-- If Angular ≤16, use:
+    <div class="col-12 col-md-6 col-lg-4" *ngFor="let card of cards">
+      ...
+    </div>
+    -->
+  </div>
+</section>
+
+<!-- Optional: FAQ link row -->
+<section class="container mb-5">
+  <div class="p-4 bg-light rounded-3 d-flex flex-column flex-md-row align-items-md-center justify-content-between">
+    <div class="mb-3 mb-md-0">
+      <h5 class="mb-1">Want to know more about KTP Suites?</h5>
+      <p class="mb-0 text-muted">Visit the about us page to learn more about what we offer.</p>
+    </div>
+    <a class="lina" routerLink="/about"> <i class="fas lina fa-question-circle me-2"></i> Visit About Us
+    </a>
+  </div>
+</section>

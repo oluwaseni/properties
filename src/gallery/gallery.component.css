@@ -8,9 +8,10 @@
 }
 
 swiper-container {
-  --swiper-navigation-color: #6b3b00; /* Change arrow color */
-  --swiper-navigation-size: 30px;     /* Optional: arrow size */
+  --swiper-navigation-color: #66091d; /* Change arrow color */
+  --swiper-navigation-size: 40px;     /* Optional: arrow size */
 }
+
 
 
 .property-details table {
@@ -93,5 +94,34 @@ swiper-container {
     .mobile-image{
       display: block;
     }
+
+
+    
+/* Fixed-height slide area */
+.slide-fixed {
+  height: 320px;                /* mobile height; tweak to taste */
+}
+
+/* Fill the slide, cropping as needed without distortion */
+.slide-photo-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;            /* cover without squashing */
+  object-position: center;      /* keep center focal point */
+}
+
+/* Larger height on bigger screens */
+@media (max-width: 768px) {
+  .slide-fixed { height: 420px; }
+
+  .property-details{
+    padding-bottom: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
+    /* background-color: #642a03; */
+  }
+}
+@media (min-width: 992px) {
+  .slide-fixed { height: 520px; }
+}
 
 }

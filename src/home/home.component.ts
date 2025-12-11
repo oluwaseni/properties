@@ -61,7 +61,7 @@ setSwiperEffect() {
 
 
 goToDetails(card: any) {
-  this.propertyService.setSelectedProperty(card);
+  this.propertyService.setProperties(card);
   this.router.navigate(['/property', card.id]);
 }
 

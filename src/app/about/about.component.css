@@ -1,0 +1,120 @@
+
+/* src/app/about-us/about-us.component.css */
+
+
+/* HERO: full-width background at top of page */
+.hero-banner {
+  position: relative;
+  min-height: 48vh;                 /* height of hero */
+  background-image: url('../../assets/images/16.png'); /* <-- put your image here */
+  background-size: cover;           /* make it cover the area */
+  background-position: center;      /* center focal point */
+  background-repeat: no-repeat;
+}
+
+/* Gradient overlay to ensure text is readable */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.25)
+  );
+}
+
+/* Title styling */
+.hero-title {
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+/* Breadcrumb separators visible on dark bg */
+.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Responsive: slightly shorter hero on small screens */
+@media (max-width: 991.98px) {
+  .hero-banner { min-height: 40vh; }
+}
+
+
+/* Hero */
+.hero-banner {
+  min-height: 48vh;
+}
+.hero-img {
+  height: 48vh;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.85);
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.45), rgba(0,0,0,0.15));
+}
+.hero-title {
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Breadcrumb on hero */
+.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* CTA strip */
+.cta-strip {
+  background: #f7f7f7;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Promo tiles */
+.promo-img {
+  height: 180px;
+  object-fit: cover;
+}
+
+a{
+    color: #220e01;
+}
+.promo-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(to top, rgba(0,0,0,0.45), rgba(0,0,0,0.05));
+}
+.promo-tile:hover .promo-img {
+  transform: scale(1.03);
+  transition: transform 250ms ease;
+}
+.promo-tile:hover {
+  box-shadow: 0 0.75rem 1.25rem rgba(0,0,0,0.12);
+}
+
+/* Cards and links */
+.card .stretched-link {
+  color: #220e01; /* Bootstrap primary */
+}
+.card .stretched-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+  .hero-banner,
+  .hero-img {
+    min-height: 40vh;
+    height: 40vh;
+  }
+}

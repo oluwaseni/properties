@@ -11,9 +11,9 @@
           <i class="fas fa-house"></i> Lagos > Lekki
         </button>
       </div>
-      <div class="details">Shortlet Apartments at Ikota-Villa Estate, Lekki, Lagos Island</div>
+      <div class="details details-mobile">Shortlet Apartments at Ikota-Villa Estate, Lekki, Lagos Island</div>
 
-      <a href="tel:+234 808 167 8368">
+      <a class="hide-this" href="tel:+234 808 167 8368">
         <div class="contact-tags">
 
 
@@ -57,8 +57,8 @@
     <div class="swiper-mobile col-12 col-md-6 col-lg-6 mid-top">
       <swiper-container effect="slide" grab-cursor="true" navigation="true">
         @for (card of top_slides; track card.id) {
-        <swiper-slide class="slide-img">
-          <img class="slide-img" [src]="card.image" />
+        <swiper-slide class="slide-img-mobile">
+          <img class="slide-img-mobile" [src]="card.image" />
         </swiper-slide>
         }
 
@@ -71,7 +71,8 @@
         <span class="topic-small">FEATURES</span><br>
 
         <button type="button" class="btn feature btn-outline-secondary">
-          <i class="fas fa-check-circle"></i> Pool <i class="fas fa-swimming-pool"></i>
+          <i class="fas fa-check-circle" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+          </i> Pool <i class="fas fa-swimming-pool"></i>
         </button>
         <button type="button" class="btn feature btn-outline-secondary">
           <i class="fas fa-check-circle"></i> Gym <i class="fas fa-dumbbell"></i>

@@ -1,0 +1,94 @@
+
+<!-- CTA STRIP -->
+
+<!-- HERO: background image + gradient overlay + title -->
+<section class="hero-banner">
+  <div class="hero-overlay d-flex flex-column justify-content-center align-items-center text-center">
+    
+
+    <h1 class="hero-title text-white mb-3">About us</h1>
+
+  </div>
+</section>
+
+
+
+<!-- INTRO SECTION -->
+<section class="container my-5" id="intro">
+  <div class="row justify-content-center">
+    <div class="col-lg-9">
+      <h2 class="text-center mb-3">About {{ brand }}</h2>
+      <p class="lead text-muted text-center mb-4">
+       At {{ brand }} We believe all our customers deserve the highest level of service, and we are committed to providing just that.
+
+      </p>
+      <p class="lh-lg">
+        Loose (not lose) yourself in a gated estate and serene environment with lots of sophisticated feel-well details. 
+        Our suites, gym, lounge, pool etc coupled with our services are designed to make life superlative, leaving you with the feeling of having more than a home away from home.
+      </p>
+      <ol class="lh-lg">
+        <li> Luxury Amenities: We have chosen luxury facilities for our facility from reliable and reputable brands.</li>
+        <li> Free Airport Pickup: Our short-let facility provides complimentary airport pick-up and drop-off services (on advance scheduled reques) at no extra cost.</li>
+        <li> Special Offers: We have special offers like loyalty discounts and more to help guests save money and receive special benefits</li>
+        <li> Online Payment: Stay at home and make online payments in USD and NGN via cards, transfer and various payment channels</li>
+        <li> Best Location: KTP Suites is located in a secure gated estate just off the popular Lekki-Ajah expressway, Ikota -Lekki. It’s within 300m to many eateries like Mega Chicken & The Place; ditto to a Cinema house and shopping centers.</li>
+        <li> Friendly Staff: our staff are friendly, courteous and helpful.</li>
+       </ol>
+    </div>
+  </div>
+</section>
+
+<!-- “IN THIS SECTION” -->
+<section class="container mb-5">
+  <div class="row g-3">
+    <div class="col-lg-3">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title mb-3">Why Choose Us?</h5>
+
+          <ul class="list-unstyled mb-0">
+            @for (item of sectionLeft; track item.label) {
+              <li class="d-flex align-items-center py-2 border-bottom">
+                <i class="fas far fa-check-circle me-2 text-muted"></i>
+                <a class="stretched-link text-decoration-none" [href]="item.href">{{ item.label }}</a>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title mb-3 d-lg-none">More</h5>
+          <ul class="list-unstyled mb-0">
+            @for (item of sectionRight; track item.label) {
+              <li class="d-flex align-items-center py-2 border-bottom">
+                <i class="fas  fa-check-circle me-2 text-muted"></i>
+                <a class="stretched-link text-decoration-none" [href]="item.href">{{ item.label }}</a>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spacer to mimic the wide card row in the reference -->
+    <div class="col-lg-6">
+      <div class="row g-3">
+        @for (promo of promos; track promo.title) {
+          <div class="col-12 col-md-6">
+            <a [href]="promo.href" class="promo-tile d-block position-relative overflow-hidden rounded shadow-sm">
+              <img [src]="promo.image" class="w-100 promo-img" alt="{{ promo.title }}">
+              <div class="promo-overlay">
+                <h5 class="text-white mb-1">{{ promo.title }}</h5>
+                <p class="text-white-50 mb-0">{{ promo.subtitle }}</p>
+              </div>
+            </a>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

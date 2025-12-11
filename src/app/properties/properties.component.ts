@@ -17,6 +17,24 @@ export class PropertiesComponent {
 constructor(private router: Router, private propertyService: PropertyServiceService) {}
   
 
+ ngOnInit() {
+    // Make the data available to the whole app
+    this.propertyService.setProperties(this.properties);
+  }
+
+  goToDetail(property: any) {
+    // Navigate using :id in the route
+    this.router.navigate(['/property', property.id]);
+  }
+
+  
+// // list.component.ts
+// goToDetail(property: { id: string }) {
+//   this.router.navigate(['/properties', property.id]);
+// }
+
+
+
 properties = [
     {
       id: "pent-house",
@@ -99,9 +117,11 @@ properties = [
 
 
   goToDetails(card: any) {
-  this.propertyService.setSelectedProperty(card);
+  this.propertyService.setProperties(card);
   this.router.navigate(['/property', card.id]);
 }
+
+
 
 
 

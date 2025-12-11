@@ -28,15 +28,37 @@
      padding: 5px 7px;
 }
 
+.mobile{
+    display: none !important;
+}
+
+
 /* For tablets (max width 768px) */
 @media (max-width: 768px) {
 .navbar{
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
-    margin: 0 2%;
+    margin: 0 0;
     padding: 0 0px 0 10px;
 
 }
+
+.navbar{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 0 10px;
+
+}
+
+
+.mobile{
+    display: flex !important;
+}
+
+.desktop{
+    display: none !important;
+}
+
 
 
 }

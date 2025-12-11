@@ -1,6 +1,12 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { PropertyServiceService } from '../app/services/property-service.service';
 
+// item-detail.component.ts
+import { ActivatedRoute } from '@angular/router';
+
+import { switchMap, distinctUntilChanged, map } from 'rxjs/operators';
+
+
 
 @Component({
   selector: 'app-gallery',
@@ -14,16 +20,34 @@ export class GalleryComponent {
 
 
   
- constructor(private propertyService: PropertyServiceService) {}
+ constructor(private propertyService : PropertyServiceService, private route:ActivatedRoute) {}
 
  property: any;
+ notFound = false;
 
-  ngOnInit(): void {
-    this.property = this.propertyService.getSelectedProperty();
-
-    console.log(this.property)
-  }
   
+
+  ngOnInit() {
+    
+const id = this.route.snapshot.paramMap.get('id')!;
+    const item = this.propertyService.getById(id);
+    if (item) {
+      this.property = item;
+    } else {
+      this.notFound = true; // show “not found” or navigate away
+    }
+  }
+
+
+
+// ngOnInit(): void {
+//     this.property = this.propertyService.getSelectedProperty();
+
+//     console.log(this.property)
+//   }
+  
+
+
 
 
 

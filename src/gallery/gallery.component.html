@@ -11,16 +11,22 @@
   </swiper-container>
   </div>
 
-  <div class="property-images mobile-image mb-4">
-  <swiper-container class="mySwiper" space-between="0" slides-per-view="1"  navigation="true"
-    pagination-clickable="true">
-    @for (card of property.image; track card.id) {
-    <swiper-slide class="slide-img">
-      <img class="slide-img" height="500px" width="100%" [src]="card" />
-    </swiper-slide>
+ 
+<div class="property-images mobile-image mb-4">
+  <swiper-container class="mySwiper"
+    space-between="0"
+    slides-per-view="1"
+    navigation="true"
+    pagination-clickable="true"
+    style="--swiper-navigation-color: #ffffff;">
+    @for (card of property.image; track card) {
+      <swiper-slide class="slide-fixed">
+        <img class="slide-photo-cover" [src]="card" alt="Property photo" />
+      </swiper-slide>
     }
   </swiper-container>
-  </div>
+</div>
+
 <!-- @if (property) { -->
   <div class="row property-details">
     <div class="col-md-8">
@@ -122,7 +128,7 @@
   <button (click)="revealNumbers()" class="btn call-now" type="button"><i class="fas fas fa-phone-alt"></i> Reveal Contacts </button>
 
   
-</div>
+      </div>
     </div>
   </div>
 

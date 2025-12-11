@@ -1,0 +1,72 @@
+
+/* src/app/contact-us/contact.component.css */
+
+/* Brand colors (tune to your palette) */
+:root {
+  --navy: #0f2b5c;
+  --navy-dark: #0b2249;
+  --accent: #ff6a00; /* orange */
+}
+
+.call-btn{
+    background-color: #220e01;
+    color: #eef3fb;
+}
+
+/* Hero */
+.contact-hero {
+    background: #220e01;
+  /* background: linear-gradient(0deg, var(--navy-dark), var(--navy)); */
+  position: relative;
+}
+.hero-image {
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-subtitle {
+  max-width: 42ch;
+}
+
+/* Decorative orange quarter circle */
+.accent-shape {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  width: 140px;
+  height: 140px;
+  background: var(--accent);
+  border-top-right-radius: 140px;
+}
+.lina{
+    color: #220e01;
+}
+/* Quick strip under hero */
+.contact-strip {
+  background: #f7f7f7;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Cards */
+.contact-card .icon-pill {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef3fb;
+  color: #220e01; /* Bootstrap primary */
+  border-radius: 999px;
+  font-size: 1.15rem;
+}
+.contact-card:hover {
+  box-shadow: 0 1rem 1.5rem rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+  transition: box-shadow 200ms ease, transform 200ms ease;
+}
+
+/* Responsive hero image height */
+@media (min-width: 992px) {
+  .hero-image { height: 340px; }
+}

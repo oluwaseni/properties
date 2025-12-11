@@ -1,0 +1,14 @@
+
+/* Mobile-only spacing for the last card */
+@media (max-width: 767.98px) {
+  
+  .props {
+    margin-bottom: 2.5rem;
+  }
+
+}
+
+
+.card{
+    cursor: pointer;
+}
