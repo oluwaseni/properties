@@ -1,0 +1,168 @@
+
+/* Design tokens */
+:root {
+  --bg: #ffffff;
+  --text: #151515;
+  --muted: #6f6f6f;
+  --brand: #000000;
+  --accent-default: #eaeaea;
+  --nav-active: #ff6b00; /* orange accent */
+}
+
+
+* { box-sizing: border-box; }
+
+.page {
+  background: var(--bg);
+  min-height: 100vh;
+  padding: 28px 32px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+/* Top bar */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 8px 0;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+
+  a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    position: relative;
+    padding: 6px 0;
+
+    &.active { color: var(--nav-active); }
+    &:hover   { color: var(--nav-active); }
+  }
+}
+
+/* Main split layout */
+.content {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 40px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Left hero text */
+.hero {
+  align-self: start;
+  max-width: 520px;
+  padding: 12px 4px;
+
+  .kicker { font-size: 26px; margin: 0 0 6px; font-weight: 600; }
+
+  .title {
+    font-size: clamp(28px, 5vw, 44px);
+    line-height: 1.15;
+    margin: 0 0 14px;
+    font-weight: 700;
+
+    .strong { font-weight: 800; }
+  }
+
+  .subtitle {
+    color: var(--muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+}
+
+/* //////////////////////////////////////////////////////////////////// */
+
+
+.tile {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;       /* ensures rounded corners clip the image */
+  background: #f4f5f6;
+
+  /* Control the frame’s aspect ratios */
+  aspect-ratio: 1 / 1;    /* square by default */
+  &.tall { aspect-ratio: 3 / 4; }
+  &.wide { aspect-ratio: 4 / 3; }
+
+  /* Make the image fill the tile */
+  img {
+    position: absolute;
+    inset: 0;             /* top:0; right:0; bottom:0; left:0 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* fill and crop as needed */
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+/* //////////////////////////////////////////////// */
+/* Right gallery grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  @media (max-width: 900px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 560px) { grid-template-columns: 1fr; }
+}
+
+/* Tile */
+.tile {
+  position: relative;
+  background: #f7f7f7;
+  border-radius: 6px;
+  overflow: hidden;
+  display: grid;
+  aspect-ratio: 1 / 1;
+
+  &.tall { aspect-ratio: 3 / 4; }
+  &.wide { aspect-ratio: 4 / 3; }
+
+  .accent {
+    position: absolute;
+    inset: 0;
+    background: var(--accent, var(--accent-default));
+  }
+
+
+    /* Make the image fill the tile */
+  img {
+    position: absolute;
+    inset: 0;             /* top:0; right:0; bottom:0; left:0 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* fill and crop as needed */
+    display: block;
+    mix-blend-mode: multiply; /* tint effect like mock */
+    transition: transform 240ms ease, filter 240ms ease;
+  }
+
+  &:hover img {
+    transform: scale(1.03);
+    filter: contrast(1.05) saturate(1.08);
+  }
+}

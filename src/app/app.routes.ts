@@ -20,6 +20,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./contact/contact.component').then((m) => m.ContactComponent),
   },
+  { 
+    path: 'pictures',
+    loadComponent: () =>
+      import('./pictures/pictures.component').then((m) => m.PicturesComponent),
+  },
    { 
 
     path: 'properties',

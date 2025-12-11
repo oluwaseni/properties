@@ -6,7 +6,7 @@
 .hero-banner {
   position: relative;
   min-height: 48vh;                 /* height of hero */
-  background-image: url('../../assets/images/16.png'); /* <-- put your image here */
+  background-image: url('../../assets/images/13.png'); /* <-- put your image here */
   background-size: cover;           /* make it cover the area */
   background-position: center;      /* center focal point */
   background-repeat: no-repeat;
@@ -83,7 +83,7 @@
 }
 
 a{
-    color: #220e01;
+    color: #3d2103;
 }
 .promo-overlay {
   position: absolute;
@@ -104,7 +104,7 @@ a{
 
 /* Cards and links */
 .card .stretched-link {
-  color: #220e01; /* Bootstrap primary */
+  color: #3d2103; /* Bootstrap primary */
 }
 .card .stretched-link:hover {
   text-decoration: underline;

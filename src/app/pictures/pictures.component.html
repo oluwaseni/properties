@@ -1,0 +1,38 @@
+
+<div class="page">
+ 
+
+  <main class="content">
+    <!-- Left hero copy -->
+    <section class="hero">
+      <h1 class="kicker">Check out</h1>
+      <h1 class="title">
+        A Gallery of<br />
+        <span class="strong">Our Features</span>
+      </h1>
+      <p class="subtitle">
+        A secured environment with<br />
+        All you need to feel<br />
+        at home.
+      </p>
+    </section>
+
+    <!-- Right gallery grid -->
+   
+
+<section class="gallery">
+  @for (item of items; track item.src; let i = $index) {
+    <div
+      class="tile"
+      [style.--accent]="item.accent || 'transparent'"
+      [class.tall]="i === 0"
+      [class.wide]="i === 3"
+    >
+      <div class="accent"></div>
+      <img [src]="item.src" [alt]="item.alt" loading="lazy" />
+    </div>
+  }
+</section>
+
+
+  </main>

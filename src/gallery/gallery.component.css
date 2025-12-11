@@ -8,7 +8,7 @@
 }
 
 swiper-container {
-  --swiper-navigation-color: #66091d; /* Change arrow color */
+  --swiper-navigation-color: #033d14 !important; /* Change arrow color */
   --swiper-navigation-size: 40px;     /* Optional: arrow size */
 }
 
@@ -33,7 +33,7 @@ swiper-container {
 
 .feature-icon {
       font-size: 2rem;
-      color: #642a03;
+      color: #3d2103;
       margin-bottom: 10px;
       float: left !important;
     }
@@ -63,7 +63,7 @@ swiper-container {
     }
 
     .pay-now{
-      background-color: #642a03;
+      background-color: #3d2103;
       font-weight: bold;
       font-size: 30px;
       color: #ffffff;
@@ -73,7 +73,7 @@ swiper-container {
       background-color: #ffffff;
       font-weight: bold;
       font-size: 20px;
-      color: #642a03;
+      color: #3d2103;
       width: 100% !important;
     }
 
@@ -117,7 +117,7 @@ swiper-container {
   .property-details{
     padding-bottom: 2.5rem !important;
     margin-bottom: 2.5rem !important;
-    /* background-color: #642a03; */
+    /* background-color: #3d2103; */
   }
 }
 @media (min-width: 992px) {

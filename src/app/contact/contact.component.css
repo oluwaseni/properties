@@ -9,13 +9,13 @@
 }
 
 .call-btn{
-    background-color: #220e01;
+    background-color: #3d2103;
     color: #eef3fb;
 }
 
 /* Hero */
 .contact-hero {
-    background: #220e01;
+    background: #3d2103;
   /* background: linear-gradient(0deg, var(--navy-dark), var(--navy)); */
   position: relative;
 }
@@ -39,7 +39,7 @@
   border-top-right-radius: 140px;
 }
 .lina{
-    color: #220e01;
+    color: #3d2103;
 }
 /* Quick strip under hero */
 .contact-strip {
@@ -56,7 +56,7 @@
   align-items: center;
   justify-content: center;
   background: #eef3fb;
-  color: #220e01; /* Bootstrap primary */
+  color: #3d2103; /* Bootstrap primary */
   border-radius: 999px;
   font-size: 1.15rem;
 }

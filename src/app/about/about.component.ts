@@ -42,7 +42,7 @@ export class AboutComponent {
     },
     {
       title: 'Secured Environment',
-      subtitle: 'discover destinations',
+      subtitle: 'Luxury Apartmens',
       image: '../assets/images/4.png',
       href: '/properties'
     }

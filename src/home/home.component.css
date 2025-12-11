@@ -59,7 +59,7 @@ display: none;
 
 .text-small{
     font-size: 12px;
-    color: #642a03;
+    color: #3d2103;
 }
 
 .topic-small{
@@ -106,7 +106,7 @@ display: none;
 
 .light{
     background-color: rgb(241, 241, 241);
-    color: #642a03;
+    color: #3d2103;
     border-radius: 15px;
 }
 
@@ -210,7 +210,7 @@ display: none;
   object-fit: cover;
 }
 .card-price{
-  color: #642a03;
+  color: #3d2103;
   font-size: 18px;
   font-weight: bold;
 }
@@ -234,7 +234,7 @@ display: none;
 
 
 swiper-container {
-  --swiper-navigation-color: #66091d;
+  --swiper-navigation-color: #0b8059;
   --swiper-navigation-size: 40px;     
 }
 
@@ -242,7 +242,7 @@ swiper-container {
 
 .swiper-desktop {
   display: block;
-  color: #642a03 !important;
+  color: #3d2103 !important;
 }
 .swiper-mobile {
   display: none;
@@ -267,7 +267,7 @@ swiper-container {
 
   
 .bottomside{ 
-  background-color: #220e01;
+  background-color: #3d2103;
 }
 
 .mid-bottom{
@@ -335,7 +335,7 @@ font-family: 'Montserrat', sans-serif;
 
 .feature-tags{
   position: relative;
-  margin-top: 10%;
+  margin-top: 30%;
 }
 
 .bottom-bottom{
