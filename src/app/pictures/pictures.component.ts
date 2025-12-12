@@ -30,12 +30,31 @@ export class PicturesComponent {
     { src: '../assets/pictures/7.jfif',   alt: 'Gaming',                    accent: '#a6492e' },
     { src: '../assets/pictures/8.jfif',  alt: 'Pool',                   accent: '#59a260' },
     { src: '../assets/pictures/4.jfif',  alt: 'Washing Machine',                   accent: '#070d41ff' },
+    { src: '../assets/pictures/14.jfif',  alt: 'Washing Machine',                   accent: '#070d41ff' },
+    { src: '../assets/pictures/15.jfif',  alt: 'Washing Machine',                   accent: '#070d41ff' },
+    { src: '../assets/pictures/16.jfif',  alt: 'Washing Machine',                   accent: '#070d41ff' },
+    { src: '../assets/pictures/11.jfif',  alt: 'Washing Machine',                   accent: '#070d41ff' },
+    { src: '../assets/images/5.png',  alt: 'Washing Machine',                   accent: '#070d41ff' },
+    { src: '../assets/images/6.png',  alt: 'Washing Machine',                   accent: '#070d41ff' },
   ];
 
   // For @for's track clause — must be invoked: track trackByIndex($index, item)
   trackByIndex(index: number, _item: GalleryItem): number {
     return index;
   }
+
+  
+ /** How many tiles should appear to the RIGHT of the hero in the first row. */
+  rightCount = 3;
+
+  /** Derived arrays for layout (keeps template simple). */
+  get rightItems(): GalleryItem[] {
+    return this.items.slice(0, this.rightCount);
+  }
+  get belowItems(): GalleryItem[] {
+    return this.items.slice(this.rightCount);
+  }
+
 
 
 }

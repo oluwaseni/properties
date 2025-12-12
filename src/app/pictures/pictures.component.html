@@ -2,37 +2,38 @@
 <div class="page">
  
 
-  <main class="content">
-    <!-- Left hero copy -->
+ 
+<main class="content">
+    <!-- Row 1, Column 1: Hero -->
     <section class="hero">
-      <h1 class="kicker">Check out</h1>
+      <p class="kicker">Check out</p>
       <h1 class="title">
         A Gallery of<br />
         <span class="strong">Our Features</span>
       </h1>
       <p class="subtitle">
         A secured environment with<br />
-        All you need to feel<br />
+        all you need to feel<br />
         at home.
       </p>
     </section>
 
-    <!-- Right gallery grid -->
-   
+    <!-- Row 1, Column 2: Gallery to the RIGHT of the hero -->
+    <section class="gallery-right">
+      @for (item of rightItems; track item.src; let i = $index) {
+        <figure class="tile">
+          <img [src]="item.src" [alt]="item.alt" loading="eager" />
+        </figure>
+      }
+    </section>
 
-<section class="gallery">
-  @for (item of items; track item.src; let i = $index) {
-    <div
-      class="tile"
-      [style.--accent]="item.accent || 'transparent'"
-      [class.tall]="i === 0"
-      [class.wide]="i === 3"
-    >
-      <div class="accent"></div>
-      <img [src]="item.src" [alt]="item.alt" loading="lazy" />
-    </div>
-  }
-</section>
-
-
+    <!-- Row 2 (spans both columns): Gallery BELOW the hero -->
+    <section class="gallery-below">
+      @for (item of belowItems; track item.src; let i = $index) {
+        <figure class="tile">
+          <img [src]="item.src" [alt]="item.alt" loading="lazy" />
+        </figure>
+      }
+    </section>
   </main>
+</div>
