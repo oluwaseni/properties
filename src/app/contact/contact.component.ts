@@ -42,7 +42,7 @@ brand = 'KTP Suites';
       title: 'New apartment enquiries',
       body: 'Looking for short-let options in Lekki or Ikota? Get recommendations instantly.',
       ctaText: 'WhatsApp us',
-      href: 'https://wa.me/2348033353235'
+      href: 'https://wa.me/2348081678368'
     },
     {
       icon: 'fas fa-envelope-open-text',
@@ -55,7 +55,7 @@ brand = 'KTP Suites';
 
   // Quick contact strip
   quick = {
-    phone: '0803 335 3235',
+    phone: '2348081678368',
     mail: 'ktpsuites@gmail.com.com'
   };
 }

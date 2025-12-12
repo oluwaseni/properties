@@ -21,14 +21,15 @@ export class PicturesComponent {
 
   
   items: GalleryItem[] = [
-    { src: '../assets/pictures/1.jfif', alt: 'Butterfly on orange flower', accent: '#d3c7c0' },
-    { src: '../assets/pictures/2.jfif',       alt: 'Black dog',                  accent: '#f0b90b' },
-    { src: '../assets/pictures/3.jfif', alt: 'Polar bear',                 accent: '#d6d9dc' },
-    { src: '../assets/pictures/4.jfif',  alt: 'Flamingo',                   accent: '#6fb1d8' },
-    { src: '../assets/pictures/5.jfif',   alt: 'Leopard',                    accent: '#8bb48c' },
-    { src: '../assets/pictures/6.jfif',      alt: 'Deer',                       accent: '#1e2c2b' },
-    { src: '../assets/pictures/7.jfif',   alt: 'Rooster',                    accent: '#a6492e' },
-    { src: '../assets/pictures/8.jfif',  alt: 'Squirrel',                   accent: '#59a260' },
+    { src: '../assets/pictures/1.jfif', alt: 'Gym', accent: '#d3c7c0' },
+    { src: '../assets/pictures/13.jfif',       alt: 'Lounge',                  accent: '#f0b90b' },
+    { src: '../assets/pictures/3.jfif', alt: 'Bar',                 accent: '#d6d9dc' },
+    { src: '../assets/pictures/11.jfif',  alt: 'Solar-powered',                   accent: '#6fb1d8' },
+    { src: '../assets/pictures/5.jfif',   alt: 'Swimming Pool',                    accent: '#8bb48c' },
+    { src: '../assets/pictures/6.jfif',      alt: 'Dinning',                       accent: '#1e2c2b' },
+    { src: '../assets/pictures/7.jfif',   alt: 'Gaming',                    accent: '#a6492e' },
+    { src: '../assets/pictures/8.jfif',  alt: 'Pool',                   accent: '#59a260' },
+    { src: '../assets/pictures/4.jfif',  alt: 'Washing Machine',                   accent: '#070d41ff' },
   ];
 
   // For @for's track clause — must be invoked: track trackByIndex($index, item)

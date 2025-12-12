@@ -157,7 +157,7 @@
     height: 100%;
     object-fit: cover;    /* fill and crop as needed */
     display: block;
-    mix-blend-mode: multiply; /* tint effect like mock */
+    /* mix-blend-mode: multiply; tint effect like mock */
     transition: transform 240ms ease, filter 240ms ease;
   }
 

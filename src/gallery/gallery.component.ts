@@ -4,7 +4,7 @@ import { PropertyServiceService } from '../app/services/property-service.service
 // item-detail.component.ts
 import { ActivatedRoute } from '@angular/router';
 
-import { switchMap, distinctUntilChanged, map } from 'rxjs/operators';
+// import { switchMap, distinctUntilChanged, map } from 'rxjs/operators';
 
 
 
