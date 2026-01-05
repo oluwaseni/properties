@@ -37,17 +37,17 @@ export class AboutComponent {
     {
       title: 'Holiday with confidence',
       subtitle: 'with KTP Suites',
-      image: '../assets/images/3.png',
+      image: '../assets/images/25.jfif',
       href: '/properties'
     },
     {
       title: 'Secured Environment',
       subtitle: 'Luxury Apartmens',
-      image: '../assets/images/4.png',
+      image: '../assets/images/24.jfif',
       href: '/properties'
     }
   ];
 
   // Hero banner image
-  heroImage = '../assets/images/16.png';
+  heroImage = '../assets/images/24.jfif';
 }

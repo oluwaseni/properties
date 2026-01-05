@@ -25,7 +25,7 @@ brand = 'KTP Suites';
   hero = {
     title: 'Address',
     subtitle: `Road 3, house 19, Ikota villa behind mega chicken.`,
-    image: '../../assets/images/customer.avif'
+    image: '../../assets/images/customer.png'
   };
 
   // Cards under the hero (adjust to your needs)

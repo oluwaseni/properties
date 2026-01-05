@@ -38,11 +38,11 @@ constructor(private router: Router, private propertyService: PropertyServiceServ
 properties = [
     {
       id: "pent-house",
-      'image': [  '../assets/images/3.png',
-        '../assets/images/1.png',
-        '../assets/images/6.png',
-        '../assets/images/4.png',
-        '../assets/images/5.png'
+      'image': [  '../assets/images/28.jfif',
+        '../assets/images/29.jfif',
+        '../assets/images/30.jfif',
+        '../assets/images/31.jfif',
+        '../assets/images/32.jfif'
 
       ],
       title: 'Pent House',
@@ -53,26 +53,27 @@ properties = [
       love: 1,
       description: 'Pent floor: Private executive balcony, elaborate layout and Private laundry'
     },
-    {
-      id: "deluxe",
-      'image': [  '../assets/images/14.png',
-        '../assets/images/3.png',
-        '../assets/images/9.png'
+    // {
+    //   id: "deluxe",
+    //   'image': [  '../assets/images/14.jfif',
+    //     '../assets/images/3.jfif',
+    //     '../assets/images/9.jfif'
 
-      ],
-      title: 'Deluxe Plus',
-      prices: '100,000',
-      bed: '2',
-      bath: '3',
-      available: 1,
-      love: 1,
-      description: '2 Bedroom en-suite'
-    },
+    //   ],
+    //   title: 'Deluxe Plus',
+    //   prices: '100,000',
+    //   bed: '2',
+    //   bath: '3',
+    //   available: 1,
+    //   love: 1,
+    //   description: '2 Bedroom en-suite'
+    // },
     {
       id: "two-bed-ensuite",
-      'image': [  '../assets/images/6.png',
-        '../assets/images/3.png',
-        '../assets/images/1.png'
+      'image': [  '../assets/images/21.jfif',
+        '../assets/images/22.jfif',
+        '../assets/images/19.jfif',
+        '../assets/images/23.jfif'
 
       ],
       title: 'Deluxe',
@@ -85,9 +86,9 @@ properties = [
     },
     {
       id: "one-bed-ensuite",
-      'image': [  '../assets/images/12.png',
-        '../assets/images/1.png',
-        '../assets/images/9.png'
+      'image': [  '../assets/images/12.jfif',
+        '../assets/images/33.jfif',
+        '../assets/images/12.jfif'
 
       ],
       title: '1 Bed Apartment',
@@ -100,9 +101,9 @@ properties = [
     },
     {
       id: "studio",
-      'image': [  '../assets/images/16.png',
-        '../assets/images/7.png',
-        '../assets/images/1.png'
+      'image': [  '../assets/images/13.jfif',
+        '../assets/images/14.jfif',
+        '../assets/images/15.jfif'
 
       ],
       title: 'Studio Apartment',

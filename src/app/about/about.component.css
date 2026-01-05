@@ -6,7 +6,7 @@
 .hero-banner {
   position: relative;
   min-height: 48vh;                 /* height of hero */
-  background-image: url('../../assets/images/13.png'); /* <-- put your image here */
+  background-image: url('../../assets/images/1.jfif'); /* <-- put your image here */
   background-size: cover;           /* make it cover the area */
   background-position: center;      /* center focal point */
   background-repeat: no-repeat;

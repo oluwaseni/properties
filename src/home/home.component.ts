@@ -71,32 +71,38 @@ goToDetails(card: any) {
 top_slides = [
     {
       id: 1,
-      image:  '../assets/images/11.png',
+      image:  '../assets/images/1.jfif',
       title: 'Mountain Trail',
       description: 'Explore the rocky paths with confidence and style.'
     },
     {
       id: 2,
-      image: '../assets/images/5.png',
+      image: '../assets/images/29.jfif',
+      title: 'Desert Drive',
+      description: 'Navigate the dunes with powerful off-road vehicles.'
+    },
+    {
+      id: 2,
+      image: '../assets/images/9.jfif',
       title: 'Desert Drive',
       description: 'Navigate the dunes with powerful off-road vehicles.'
     },
     {
       id: 3,
-      image: '../assets/images/13.png',
+      image: '../assets/images/6.jfif',
       title: 'Forest Route',
       description: 'Immerse yourself in nature with guided GPS trails.'
     },
     {
       id: 4,
-      image: '../assets/images/4.png',
+      image: '../assets/images/22.jfif',
       title: 'Snow Expedition',
       description: 'Conquer icy terrains with advanced traction systems.'
     }
     ,
     {
       id: 5,
-      image: '../assets/images/15.png',
+      image: '../assets/images/26.jfif',
       title: 'Snow Expedition',
       description: 'Conquer icy terrains with advanced traction systems.'
     }
