@@ -18,7 +18,6 @@ export class AboutComponent {
   // “In this section” links (left/right groups for layout)
   sectionLeft = [
     { label: 'Luxury Amenities', href: '#history' },
-    { label: ' Free Airport Pickup', href: '#careers' },
     { label: 'Special Offers', href: '#newsletter' },
     { label: 'Online Payment', href: '#awards' },
     { label: ' Best Location', href: '#team' },
@@ -26,7 +25,7 @@ export class AboutComponent {
 
   sectionRight = [
     { label: 'Friendly Staff', href: '#concierge' },
-    { label: 'Swimming poo', href: '#holiday' },
+    { label: 'Swimming pool', href: '#holiday' },
     { label: 'Free Wifi', href: '#gm-message' },
     { label: 'Gym', href: '#sustainability' },
     { label: 'Laundry', href: '#story' },

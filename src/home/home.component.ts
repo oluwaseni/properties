@@ -77,31 +77,37 @@ top_slides = [
     },
     {
       id: 2,
-      image: '../assets/images/29.jfif',
-      title: 'Desert Drive',
-      description: 'Navigate the dunes with powerful off-road vehicles.'
-    },
-    {
-      id: 2,
-      image: '../assets/images/9.jfif',
+      image: '../assets/images/24.jfif',
       title: 'Desert Drive',
       description: 'Navigate the dunes with powerful off-road vehicles.'
     },
     {
       id: 3,
+      image: '../assets/images/29.jfif',
+      title: 'Desert Drive',
+      description: 'Navigate the dunes with powerful off-road vehicles.'
+    },
+    {
+      id: 4,
+      image: '../assets/images/9.jfif',
+      title: 'Desert Drive',
+      description: 'Navigate the dunes with powerful off-road vehicles.'
+    },
+    {
+      id: 5,
       image: '../assets/images/6.jfif',
       title: 'Forest Route',
       description: 'Immerse yourself in nature with guided GPS trails.'
     },
     {
-      id: 4,
+      id: 6,
       image: '../assets/images/22.jfif',
       title: 'Snow Expedition',
       description: 'Conquer icy terrains with advanced traction systems.'
     }
     ,
     {
-      id: 5,
+      id: 7,
       image: '../assets/images/26.jfif',
       title: 'Snow Expedition',
       description: 'Conquer icy terrains with advanced traction systems.'
