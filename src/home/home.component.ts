@@ -77,7 +77,7 @@ top_slides = [
     },
     {
       id: 2,
-      image: '../assets/images/24.jfif',
+      image: '../assets/images/25.jfif',
       title: 'Desert Drive',
       description: 'Navigate the dunes with powerful off-road vehicles.'
     },
