@@ -38,8 +38,8 @@ constructor(private router: Router, private propertyService: PropertyServiceServ
 properties = [
     {
       id: "pent-house",
-      'image': [  '../assets/images/28.jfif',
-        '../assets/images/29.jfif',
+      'image': [  '../assets/images/29.jfif',
+        '../assets/images/28.jfif',
         '../assets/images/30.jfif',
         '../assets/images/31.jfif',
         '../assets/images/32.jfif'
@@ -53,21 +53,21 @@ properties = [
       love: 1,
       description: 'Pent floor: Private executive balcony, elaborate layout and Private laundry'
     },
-    // {
-    //   id: "deluxe",
-    //   'image': [  '../assets/images/14.jfif',
-    //     '../assets/images/3.jfif',
-    //     '../assets/images/9.jfif'
+    {
+      id: "deluxe",
+      'image': [  '../assets/images/22.jfif',
+        '../assets/images/19.jfif',
+        '../assets/images/23.jfif'
 
-    //   ],
-    //   title: 'Deluxe Plus',
-    //   prices: '100,000',
-    //   bed: '2',
-    //   bath: '3',
-    //   available: 1,
-    //   love: 1,
-    //   description: '2 Bedroom en-suite'
-    // },
+      ],
+      title: 'Deluxe Plus',
+      prices: '100,000',
+      bed: '2',
+      bath: '3',
+      available: 1,
+      love: 1,
+      description: '2 Bedroom en-suite'
+    },
     {
       id: "two-bed-ensuite",
       'image': [  '../assets/images/21.jfif',
