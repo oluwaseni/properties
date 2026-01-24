@@ -57,6 +57,7 @@ properties = [
       id: "deluxe",
       'image': [  '../assets/images/22.jfif',
         '../assets/images/19.jfif',
+        '../assets/images/20.jfif',
         '../assets/images/23.jfif'
 
       ],
@@ -72,7 +73,7 @@ properties = [
       id: "two-bed-ensuite",
       'image': [  '../assets/images/21.jfif',
         '../assets/images/22.jfif',
-        '../assets/images/19.jfif',
+        '../assets/images/20.jfif',
         '../assets/images/23.jfif'
 
       ],
