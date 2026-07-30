@@ -22,7 +22,7 @@
           @for (card of properties; track card.id) {
           <div (click)="goToDetail(card)" class="col-md-6 card-list col-lg-3 mb-4">
             <div (click)="goToDetail(card)" class="card card-list h-100 shadow-sm">
-              <img [src]="card.image[0]" class="card-img-top" alt="{{ card.title }}">
+              <img [src]="card.image[0]" class="card-img-top" alt="{{ card.title }}" loading="lazy">
               <div class="card-body text-center">
                 <!-- <div><p style="font-size: 7px;" class="fas fa-circle"></p><span> {{card.available == 1? 'Available': "Occupied"}}</span> <span style="float: right;" class="right"> <i class="fas far fa-heart"> </i></span></div> -->
                 <h5 class="card-title">{{ card.title }}</h5>
