@@ -123,15 +123,83 @@
       </table>
     <!-- <button class="btn btn-secondary  btn-lg">{{ property.prices}}</button> -->
       <div class="d-grid gap-2">
-  <button class="btn pay-now" type="button">₦ {{ property.prices}}</button>
-  
+  <button (click)="openBookingModal()" class="btn pay-now" type="button">
+    ₦ {{ property.prices }}
+  </button>
+
   <button (click)="revealNumbers()" class="btn call-now" type="button"><i class="fas fas fa-phone-alt"></i> Reveal Contacts </button>
 
-  
+
       </div>
     </div>
   </div>
 
 
 </div>
+
+@if (showBookingModal) {
+  <div class="booking-backdrop" (click)="closeBookingModal()">
+    <div class="booking-modal" (click)="$event.stopPropagation()">
+      <div class="booking-modal-header">
+        <h4>Book {{ property.title }}</h4>
+        <button type="button" class="booking-close" (click)="closeBookingModal()" [disabled]="payingNow" aria-label="Close">
+          <i class="fas fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="booking-modal-body">
+        <div class="mb-3">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control" [(ngModel)]="fullName" name="fullName" [disabled]="payingNow" placeholder="e.g. John Doe" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-control" [(ngModel)]="customerEmail" name="customerEmail" [disabled]="payingNow" placeholder="e.g. john@example.com" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" [(ngModel)]="phone" name="phone" [disabled]="payingNow" placeholder="e.g. 08012345678" />
+        </div>
+
+        <div class="row">
+          <div class="col-6 mb-3">
+            <label class="form-label">Check-in</label>
+            <input type="date" class="form-control" [(ngModel)]="checkIn" name="checkIn" [min]="minCheckIn" [disabled]="payingNow" />
+          </div>
+          <div class="col-6 mb-3">
+            <label class="form-label">Check-out</label>
+            <input type="date" class="form-control" [(ngModel)]="checkOut" name="checkOut" [min]="minCheckOut" [disabled]="payingNow" />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Additional Details (optional)</label>
+          <textarea class="form-control" rows="2" [(ngModel)]="notes" name="notes" [disabled]="payingNow" placeholder="Special requests, check-in time, etc."></textarea>
+        </div>
+
+        <div class="booking-total">
+          @if (days > 0) {
+            <span>{{ days }} night{{ days > 1 ? 's' : '' }} &times; &#8358; {{ pricePerNight | number }}</span>
+          } @else {
+            <span class="text-danger">Select a valid date range</span>
+          }
+          <strong>&#8358; {{ totalAmount | number }}</strong>
+        </div>
+
+        @if (paymentError) {
+          <div class="text-danger mt-2">{{ paymentError }}</div>
+        }
+      </div>
+
+      <div class="booking-modal-footer">
+        <button type="button" class="btn receipt-btn-outline" (click)="closeBookingModal()" [disabled]="payingNow">Cancel</button>
+        <button type="button" class="btn receipt-btn-primary" (click)="submitBooking()" [disabled]="payingNow">
+          {{ payingNow ? 'Redirecting…' : 'Proceed to Pay ₦ ' + (totalAmount | number) }}
+        </button>
+      </div>
+    </div>
+  </div>
+}
 }

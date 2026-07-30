@@ -36,6 +36,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('../gallery/gallery.component').then((m) => m.GalleryComponent),
   },
+  {
+    path: 'payment/callback',
+    loadComponent: () =>
+      import('./payment-callback/payment-callback.component').then((m) => m.PaymentCallbackComponent),
+  },
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 

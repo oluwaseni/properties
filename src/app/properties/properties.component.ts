@@ -38,11 +38,11 @@ constructor(private router: Router, private propertyService: PropertyServiceServ
 properties = [
     {
       id: "pent-house",
-      'image': [  '../assets/images/29.jfif',
-        '../assets/images/28.jfif',
-        '../assets/images/30.jfif',
-        '../assets/images/31.jfif',
-        '../assets/images/32.jfif'
+      'image': [  '/assets/images/29.jfif',
+        '/assets/images/28.jfif',
+        '/assets/images/30.jfif',
+        '/assets/images/31.jfif',
+        '/assets/images/32.jfif'
 
       ],
       title: 'Pent House',
@@ -55,10 +55,10 @@ properties = [
     },
     {
       id: "deluxe",
-      'image': [  '../assets/images/22.jfif',
-        '../assets/images/19.jfif',
-        '../assets/images/20.jfif',
-        '../assets/images/23.jfif'
+      'image': [  '/assets/images/22.jfif',
+        '/assets/images/19.jfif',
+        '/assets/images/20.jfif',
+        '/assets/images/23.jfif'
 
       ],
       title: 'Deluxe Plus',
@@ -71,10 +71,10 @@ properties = [
     },
     {
       id: "two-bed-ensuite",
-      'image': [  '../assets/images/21.jfif',
-        '../assets/images/22.jfif',
-        '../assets/images/20.jfif',
-        '../assets/images/23.jfif'
+      'image': [  '/assets/images/21.jfif',
+        '/assets/images/22.jfif',
+        '/assets/images/20.jfif',
+        '/assets/images/23.jfif'
 
       ],
       title: 'Deluxe',
@@ -87,9 +87,9 @@ properties = [
     },
     {
       id: "one-bed-ensuite",
-      'image': [  '../assets/images/12.jfif',
-        '../assets/images/33.jfif',
-        '../assets/images/12.jfif'
+      'image': [  '/assets/images/12.jfif',
+        '/assets/images/33.jfif',
+        '/assets/images/12.jfif'
 
       ],
       title: '1 Bed Apartment',
@@ -102,9 +102,9 @@ properties = [
     },
     {
       id: "studio",
-      'image': [  '../assets/images/13.jfif',
-        '../assets/images/14.jfif',
-        '../assets/images/15.jfif'
+      'image': [  '/assets/images/13.jfif',
+        '/assets/images/14.jfif',
+        '/assets/images/15.jfif'
 
       ],
       title: 'Studio Apartment',

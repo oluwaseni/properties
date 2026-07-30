@@ -1,0 +1,121 @@
+<div class="callback-page">
+  <div class="receipt">
+
+    @if (status === 'checking') {
+      <div class="receipt-body text-center py-5">
+        <div class="spinner mb-3"></div>
+        <h2 class="mb-2">Confirming your payment&hellip;</h2>
+        <p class="text-muted mb-0">Please wait while we verify your transaction with Paystack.</p>
+      </div>
+    }
+
+    @if (status === 'success') {
+      <div class="receipt-head receipt-head--success">
+        <div class="status-icon">
+          <i class="fas fa-check"></i>
+        </div>
+        <h2>Payment Successful</h2>
+        <p>Thank you! Your booking payment has been confirmed.</p>
+      </div>
+
+      <div class="receipt-stub">
+        <div class="stub-hole stub-hole--left"></div>
+        <div class="stub-hole stub-hole--right"></div>
+      </div>
+
+      <div class="receipt-body">
+        <div class="amount-line">
+          <span class="amount-label">Amount Paid</span>
+          <span class="amount-value">&#8358; {{ amount | number }}</span>
+        </div>
+
+        <dl class="receipt-details">
+          @if (guestName) {
+            <div class="detail-row">
+              <dt>Guest</dt>
+              <dd>{{ guestName }}</dd>
+            </div>
+          }
+          @if (propertyTitle) {
+            <div class="detail-row">
+              <dt>Property</dt>
+              <dd>{{ propertyTitle }}</dd>
+            </div>
+          }
+          @if (checkIn && checkOut) {
+            <div class="detail-row">
+              <dt>Check-in</dt>
+              <dd>{{ checkIn | date: 'mediumDate' }}</dd>
+            </div>
+            <div class="detail-row">
+              <dt>Check-out</dt>
+              <dd>{{ checkOut | date: 'mediumDate' }}</dd>
+            </div>
+          }
+          @if (days) {
+            <div class="detail-row">
+              <dt>Duration</dt>
+              <dd>{{ days }} night{{ days > 1 ? 's' : '' }}</dd>
+            </div>
+          }
+          <div class="detail-row">
+            <dt>Reference</dt>
+            <dd class="mono">{{ reference }}</dd>
+          </div>
+          @if (paidAt) {
+            <div class="detail-row">
+              <dt>Date &amp; Time</dt>
+              <dd>{{ paidAt | date: 'medium' }}</dd>
+            </div>
+          }
+          @if (channel) {
+            <div class="detail-row">
+              <dt>Payment Method</dt>
+              <dd class="text-capitalize">{{ channel }}</dd>
+            </div>
+          }
+          @if (customerEmail) {
+            <div class="detail-row">
+              <dt>Email</dt>
+              <dd>{{ customerEmail }}</dd>
+            </div>
+          }
+        </dl>
+
+        <div class="d-grid gap-2 mt-4">
+          <a routerLink="/properties" class="btn receipt-btn-primary">Back to Properties</a>
+          <button (click)="print()" type="button" class="btn receipt-btn-outline">
+            <i class="fas fa-print me-1"></i> Print Receipt
+          </button>
+        </div>
+      </div>
+    }
+
+    @if (status === 'failed') {
+      <div class="receipt-head receipt-head--failed">
+        <div class="status-icon">
+          <i class="fas fa-xmark"></i>
+        </div>
+        <h2>Payment Not Confirmed</h2>
+        <p>{{ errorMessage || 'We could not confirm this payment. If you were charged, please contact support.' }}</p>
+      </div>
+
+      <div class="receipt-body">
+        @if (reference) {
+          <dl class="receipt-details">
+            <div class="detail-row">
+              <dt>Reference</dt>
+              <dd class="mono">{{ reference }}</dd>
+            </div>
+          </dl>
+        }
+
+        <div class="d-grid gap-2 mt-4">
+          <a routerLink="/contact" class="btn receipt-btn-primary">Contact Support</a>
+          <a routerLink="/properties" class="btn receipt-btn-outline">Back to Properties</a>
+        </div>
+      </div>
+    }
+
+  </div>
+</div>

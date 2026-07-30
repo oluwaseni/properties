@@ -1,4 +1,5 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Router, RouterLink } from "@angular/router";
 import { PropertyServiceService } from '../app/services/property-service.service';
 import { PropertiesComponent } from "../app/properties/properties.component";
@@ -13,14 +14,20 @@ import { PropertiesComponent } from "../app/properties/properties.component";
 })
 export class HomeComponent {
 
- 
-constructor(private router: Router, private propertyService: PropertyServiceService) {}
+
+constructor(
+  private router: Router,
+  private propertyService: PropertyServiceService,
+  @Inject(PLATFORM_ID) private platformId: Object
+) {}
 swiperEffect = 'cards'; // default effect
 isHidden = true;
 
   ngOnInit() {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
 
-        
 this.setSwiperEffect();
     window.addEventListener('resize', () => this.setSwiperEffect());
 
@@ -71,44 +78,44 @@ goToDetails(card: any) {
 top_slides = [
     {
       id: 1,
-      image:  '../assets/images/1.jfif',
+      image:  '/assets/images/1.jfif',
       title: 'Mountain Trail',
       description: 'Explore the rocky paths with confidence and style.'
     },
     {
       id: 2,
-      image: '../assets/images/25.jfif',
+      image: '/assets/images/25.jfif',
       title: 'Desert Drive',
       description: 'Navigate the dunes with powerful off-road vehicles.'
     },
     {
       id: 3,
-      image: '../assets/images/29.jfif',
+      image: '/assets/images/29.jfif',
       title: 'Desert Drive',
       description: 'Navigate the dunes with powerful off-road vehicles.'
     },
     {
       id: 4,
-      image: '../assets/images/9.jfif',
+      image: '/assets/images/9.jfif',
       title: 'Desert Drive',
       description: 'Navigate the dunes with powerful off-road vehicles.'
     },
     {
       id: 5,
-      image: '../assets/images/6.jfif',
+      image: '/assets/images/6.jfif',
       title: 'Forest Route',
       description: 'Immerse yourself in nature with guided GPS trails.'
     },
     {
       id: 6,
-      image: '../assets/images/22.jfif',
+      image: '/assets/images/22.jfif',
       title: 'Snow Expedition',
       description: 'Conquer icy terrains with advanced traction systems.'
     }
     ,
     {
       id: 7,
-      image: '../assets/images/26.jfif',
+      image: '/assets/images/26.jfif',
       title: 'Snow Expedition',
       description: 'Conquer icy terrains with advanced traction systems.'
     }

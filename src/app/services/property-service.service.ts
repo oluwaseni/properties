@@ -1,6 +1,7 @@
 
 // property-data.service.ts
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { BehaviorSubject } from 'rxjs';
 
 // export interface Property {
@@ -14,12 +15,19 @@ import { BehaviorSubject } from 'rxjs';
 export class PropertyServiceService {
   // Holds the full list (in-memory), hydrated from list component or assets.
   private properties$ = new BehaviorSubject<any[]>([]);
+  private readonly isBrowser: boolean;
+
+  constructor(@Inject(PLATFORM_ID) platformId: Object) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   // Initialize or update the list (call from list component)
   setProperties(properties: any[]) {
     this.properties$.next(properties);
     // Optional: persist to localStorage for refresh resilience
-    localStorage.setItem('properties', JSON.stringify(properties));
+    if (this.isBrowser) {
+      localStorage.setItem('properties', JSON.stringify(properties));
+    }
   }
 
   // Read the observable list
@@ -32,6 +40,9 @@ export class PropertyServiceService {
     const mem = this.properties$.value;
     if (mem && mem.length) {
       return mem.find(p => p.id === id) ?? null;
+    }
+    if (!this.isBrowser) {
+      return null;
     }
     // fallback: hydrate from localStorage on refresh
     const raw = localStorage.getItem('properties');
