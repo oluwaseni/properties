@@ -99,11 +99,7 @@
   <tr>
     <th>Contact:</th>
     <td>
-      @if (!contact.hidden) {
-        <a [href]="'tel:' + contact.number">{{ contact.number }}</a>
-      } @else {
-        xxxxxxxxxx
-      }
+      <a [href]="'tel:' + contact.number">{{ contact.number }}</a>
     </td>
   </tr>
 }
@@ -126,9 +122,6 @@
   <button (click)="openBookingModal()" class="btn pay-now" type="button">
     ₦ {{ property.prices }}
   </button>
-
-  <button (click)="revealNumbers()" class="btn call-now" type="button"><i class="fas fas fa-phone-alt"></i> Reveal Contacts </button>
-
 
       </div>
     </div>

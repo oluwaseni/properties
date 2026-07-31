@@ -108,7 +108,7 @@ properties = [
 
       ],
       title: 'Studio Apartment',
-      prices: '52,000',
+      prices: '200',
       bed: '1',
       bath: '1',
       available: 1,

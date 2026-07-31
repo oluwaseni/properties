@@ -209,13 +209,9 @@ const id = this.route.snapshot.paramMap.get('id')!;
 
 
  contacts = [
-    { number: '+234 808 167 8368', hidden: true },
-    { number: '+234 803 335 3235', hidden: true },
-    { number: '+234 803 329 4037', hidden: true }
+    { number: '+234 808 167 8368' },
+    { number: '+234 803 335 3235' },
+    { number: '+234 803 329 4037' }
   ];
-
-  revealNumbers(): void {
-    this.contacts = this.contacts.map(c => ({ ...c, hidden: false }));
-  }
 
 }
