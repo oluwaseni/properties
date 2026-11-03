@@ -46,7 +46,7 @@ properties = [
 
       ],
       title: 'Pent House',
-      prices: '110,000',
+      prices: '125,000',
       bed: '2',
       bath: '3',
       available: 1,
@@ -62,7 +62,7 @@ properties = [
 
       ],
       title: 'Deluxe Plus',
-      prices: '100,000',
+      prices: '115,000',
       bed: '2',
       bath: '3',
       available: 1,
@@ -78,7 +78,7 @@ properties = [
 
       ],
       title: 'Deluxe',
-      prices: '95,000',
+      prices: '110,000',
       bed: '2',
       bath: '2',
       available: 1,
@@ -93,7 +93,7 @@ properties = [
 
       ],
       title: '1 Bed Apartment',
-      prices: '75,000',
+      prices: '90,000',
       bed: '1',
       bath: '1',
       available: 0,
@@ -108,7 +108,7 @@ properties = [
 
       ],
       title: 'Studio Apartment',
-      prices: '52,000',
+      prices: '65,000',
       bed: '1',
       bath: '1',
       available: 1,
